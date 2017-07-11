@@ -1,5 +1,2 @@
-# Stuart McCloud Music
-A Wordpress Development Theme built for Stuart McCloud Music
-
-License: WTFPL
-License URI: http://sam.zoy.org/wtfpl/
+# Adipsy Non-Profit Marketing Site
+A Wordpress Development Theme built for Adipsy
