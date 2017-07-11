@@ -1,0 +1,65 @@
+// 123 bullets | colors: 1: #d0b20a, 2: #c70202, 3: #9702ff
+// bullet backgrounds : #002b45
+// school code orange
+// chart #015991
+// dark section #003556 @brand-primary-darkest
+// @offwhite #f8f8f8
+
+.bulletmaker(@background){
+  .step{
+    .bullet{
+      text-align:center;
+      span{
+        border-radius:50%;
+        height:40px;
+        width:40px;
+        background:@background;
+        display:inline-block;
+        padding:8px;
+      }
+    }
+  }
+}
+
+.financial-steps{
+  padding:25px 0;
+  >div{
+    margin-bottom:15px;
+    &:first-child{.bulletmaker(@financial-yellow);}
+    &:nth-child(2){.bulletmaker(@financial-red);}
+    &:last-child{.bulletmaker(@financial-purple);}
+  }
+  .step{
+    height:100%;
+    padding:30px 15px;
+    background-color:@blueshade05;
+    p{
+      padding-top:15px;
+      .text-center;
+      font-size:@font-size-small;
+      margin-bottom:0;
+    }
+  }
+}
+
+.aidcodecontainer{
+  padding-top:30px;
+  padding-bottom:40px;
+  .text-center;
+  p{
+    margin-bottom:20px!important;
+    .text-center;
+  }
+  .aidcode{
+    font-size:40px;
+    font-weight:bold;
+    color:@orange;
+  }
+}
+
+
+#pagename-financial{
+  header{
+    background-position: top;
+  }
+}

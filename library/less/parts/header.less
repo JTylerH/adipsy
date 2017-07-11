@@ -1,0 +1,233 @@
+
+
+.navs{
+  @media(min-width:@navbreakpoint){
+    position: absolute;
+  }
+  z-index: 999;
+  width: 100%;
+  // .background-image(linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 95%));
+}
+
+
+nav.nav-mobile{
+  background:@blueshade1;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media(min-width:@navbreakpoint){
+    display:none;
+  }
+  .nav-header{
+    background:@blue;
+    // padding:10px 0px 10px 15px;
+    margin:0 -15px;
+    .clearfix;
+    img{
+      padding:10px 15px 10px 15px;
+      height:55px;
+      float:left;
+    }
+    div#bars{
+      color:#fff;
+      float:right;
+      padding:14px 20px 13px 20px;
+      font-size:20px;
+      // border-left:1px @blueshade4 solid;
+      &:hover{
+        cursor:pointer;
+      }
+    }
+  }
+  ul.header-nav{
+    display:none;
+    padding:30px;
+    margin:0 -15px;
+    list-style:none;
+    li{
+      margin-bottom:3px;
+      a{
+        color:@white;
+        display:block;
+        padding:10px 15px;
+        &:hover{
+          color:@white;
+          background-color: @brand-primay-dark;
+        }
+      }
+      &:last-child{
+        a{
+          background-color: @orange;
+          &:hover{
+            background-color: @orangedark;
+          }
+        }
+      }
+    }
+  }
+}
+nav.nav-lg{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left:30px;
+  padding-right:30px;
+  letter-spacing: 0.1em;
+  width:100%;
+  max-width:1000px;
+  list-style:none;
+  z-index:3;
+  .logo{
+    float:left;
+    margin-right:10px;
+    img{
+      max-height:20px;
+      @media(min-width:800px){
+        max-height: 30px;
+      }
+    }
+  }
+  ul{
+    margin:0;
+    padding:0;
+    display:inline;
+    @media(min-width:800px){
+
+    }
+    &.top-nav-right{
+      float:right;
+    }
+    li{
+      display:inline-block;
+      &.btn{
+        margin-left:10px;
+        margin-right:10px;
+      }
+      &.current-menu-item, &.current-page-ancestor{
+        a{
+          color:#fff;
+          font-weight: bold;
+        }
+      }
+      a{
+        transition: color .3s ease;
+        color:rgba(255,255,255,1);
+        display:inline-block;
+        font-weight:normal;
+        font-size:@default-nav-font-size;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 5px;
+        text-transform: uppercase;
+        @media(min-width:800px){
+
+        }
+        @media(min-width:800px){
+
+        }
+        &:hover{
+          color:#fff;
+        }
+      }
+    }
+  }
+  &.text-white{
+    ul li{
+      &.current-menu-item, &.current-page-ancestor{
+        a{
+          color:#fff;
+        }
+      }
+      a{
+        color:rgba(255,255,255,1);
+        &:hover{
+          color:@adipsy_yellow;
+        }
+      }
+    }
+  }
+  &.text-graydark{
+    img{
+      .filter(invert());
+    }
+    ul li{
+      &.current-menu-item, &.current-page-ancestor{
+        a{
+          color:@gray-dark;
+        }
+      }
+      a{
+        color:rgba(0,0,0,.8);
+        &:hover{
+          color:@orange;
+        }
+      }
+    }
+  }
+  &.text-black{
+    img{
+      .filter(invert());
+    }
+    ul li{
+      a{
+        color:@black;
+        &:hover{
+          color:@orange;
+        }
+      }
+    }
+  }
+  @media(max-width:(@navbreakpoint - 1)){
+    display:none;
+  }
+}
+.post-type-archive-faculty{
+  nav.nav-lg{
+    ul li{
+      a[href$="academics/"]{
+        color:#fff;
+        font-weight:bold;
+      }
+    }
+    &.text-white{
+      ul li{
+        a[href$="academics/"]{
+          color:#fff;
+          font-weight:bold;
+        }
+      }
+    }
+    &.text-black{
+      ul li{
+        a[href$="academics/"]{
+          color:@orange;
+          font-weight:bold;
+        }
+      }
+    }
+  }
+}
+.single-faculty{
+  nav.nav-lg{
+    img{
+      .filter(invert());
+    }
+    ul{
+      li{
+        a{
+          color:@graydarker;
+          &:hover{
+            color:@orange;
+          }
+          &[href$="academics/"]{
+            color:@orange;
+            font-weight:bold;
+          }
+        }
+        &:last-child{
+          a{
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+}

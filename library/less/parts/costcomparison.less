@@ -1,0 +1,83 @@
+.cost-comparison{
+  p.disclaimer{
+    margin-top:15px;
+    color:@blue;
+    font-size:12px;
+    .text-left;
+    width:60%;
+    float:right;
+    .clearfix;
+  }
+  .compare-school{
+    .row;
+    padding-bottom:15px;
+    >div{
+      display:inline-block;
+      // width:50%;
+      padding-left:15px;
+      padding-right:15px;
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+    .school-name{
+      width:40%;
+      padding-right:80px;
+      .text-right;
+      text-transform:uppercase;
+      color:@blue;
+      font-weight:normal;
+      text-align-last:right;
+      span{
+        // width: 180px;
+        display: inline-block;
+        .text-right;
+        text-align-last:right;
+
+      }
+    }
+    .school-price{
+      width:60%;
+      .text-left;
+      span{
+        font-weight:normal;
+        background-color: @blue;
+        margin:-10px -15px;
+        padding-left:15px;
+        padding-right:15px;
+        padding-top:10px;
+        padding-bottom:10px;
+        width:0%;
+        transition:all 3s ease;
+        display:inline-block;
+        .text-right;
+      }
+      @school-max-price:23020*.01%;
+      &[data-price="5171"] span{
+        width:(5171/@school-max-price);
+      }
+      &[data-price="6150"] span{
+        width:(6150/@school-max-price);
+      }
+      &[data-price="10088"] span{
+        width:(10088/@school-max-price);
+      }
+      &[data-price="16700"] span{
+        width:(16700/@school-max-price);
+      }
+      &[data-price="23020"] span{
+        width:(23020/@school-max-price);
+      }
+    }
+    &.wlc-price{
+      .school-name{
+        color:@white;
+      }
+      .school-price{
+        span{
+          background-color:@white;
+          color:@orange;
+        }
+      }
+    }
+  }
+}

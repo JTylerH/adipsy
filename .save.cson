@@ -1,0 +1,1 @@
+"library/less/**/*.less": "lessc library/less/style.less library/css/style.css --source-map --lesshat"

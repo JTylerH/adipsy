@@ -1,0 +1,228 @@
+.faculty-members{
+  text-align:center;
+  padding-top:60px;
+  padding-bottom:60px;
+  .container{
+    max-width: 840px;
+  }
+  a.faculty-member{
+    .transition(all .3s ease);
+    color:#fff;
+    background:@graydark;
+    .text-center;
+    width:200px;
+    display:inline-table;
+    // float:left;
+    margin:30px;
+    box-sizing:border-box;
+    &:hover{
+      img{
+        // .filter(brightness(0.9));
+      }
+      background:lighten(@graydark,5%);
+    }
+    img{
+      width:100%;
+    }
+    .info{
+      padding:15px;
+      height:75px;
+      position:relative;
+    }
+    .expander{
+      text-align:center;
+      padding:10px;
+      &:hover{
+        cursor:pointer;
+        background-color: @graydarker;
+      }
+      span{
+          content:" ";
+          display: inline-block;
+          border-right: 2px solid #fff;
+          border-bottom: 2px solid #fff;
+          width: 10px;
+          height: 10px;
+          .transform(rotate(45deg));
+          .transition(transform .3s ease);
+      }
+    }
+    .name{
+      font-size:18px;
+      width:170px;
+      height:25px;
+    }
+    ul.classes{
+      li{.text-center;}
+      list-style: none;
+      margin:0;
+      padding:0;
+      font-size:12px;
+      color:rgba(255,255,255,.7);
+    }
+  }
+  .btn{
+    clear:both;
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+}
+
+
+
+//#######################
+//#######################
+// SINGLE FACULTY PAGE
+//#######################
+//#######################
+
+.single-faculty{
+  .container{
+    max-width:1000px;
+  }
+  ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+  }
+  header{
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+    @media(min-width: 480px){
+      padding-top: 170px!important;
+      padding-bottom: 60px!important;
+    }
+    h1{
+      padding:30px 0 10px 0;
+      margin:0 auto!important;
+    }
+    a{
+      color:@orange;
+      &:hover, &:focus, &:active{
+        color:@orangedark;
+      }
+      &.social{
+        font-size:14px;
+        color:@graydarker;
+        &:hover, &:focus, &:active{
+          color:@orange;
+        }
+      }
+    }
+    .faculty-img{
+      padding-left:30px;
+      padding-right:30px;
+      img{
+        width:100%;
+        max-width:300px;
+        border:2px solid #fff;
+        border-radius:50%;
+        overflow:hidden;
+      }
+    }
+  }
+  .faculty-member-info{
+    // border-top:1px solid @offwhite;
+
+    padding-top:60px;
+    padding-bottom:60px;
+    h3{
+      margin-top:0;
+    }
+    .accolades{
+      margin-bottom:30px;
+    }
+    .classes{
+      background-color:@offwhite;
+      padding:15px;
+    }
+  }
+}
+
+//######################
+//######################
+// ADMINSTRATION
+//######################
+//######################
+
+.admin-members{
+  text-align:center;
+  padding-top:60px;
+  padding-bottom:60px;
+  .container{
+    max-width:950px;
+  }
+  a.admin-member{
+    border:1px solid #eee;
+    .transition(all .3s ease);
+    color:@graydark;
+    background:@offwhite;
+    .text-center;
+    width:200px;
+    display:inline-table;
+    // float:left;
+    margin:30px;
+    box-sizing:border-box;
+    &:hover{
+      img{
+        .filter(brightness(0.9));
+      }
+
+      background:darken(@offwhite,1%);
+    }
+    img{
+      .transition(all .3s ease);
+      width:100%;
+    }
+    .info{
+      padding:30px;
+      height: 107px;
+      position:relative;
+      text-align:left;
+    }
+    .expander{
+      text-align:center;
+      padding:10px;
+      &:hover{
+        cursor:pointer;
+        background-color: @graydarker;
+      }
+      span{
+          content:" ";
+          display: inline-block;
+          border-right: 2px solid #fff;
+          border-bottom: 2px solid #fff;
+          width: 10px;
+          height: 10px;
+          .transform(rotate(45deg));
+          .transition(transform .3s ease);
+      }
+    }
+    .name{
+      font-size:18px;
+      width:170px;
+      height:25px;
+      text-align:center;
+    }
+    .title{
+      font-size:12px;
+      text-align:center;
+    }
+    ul.accolades{
+      margin-top:10px;
+      list-style: none;
+      padding:0;
+      li{
+        &:before{
+          content:"• ";
+        }
+      }
+      font-size:10px;
+    }
+  }
+  .btn{
+    clear:both;
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+}

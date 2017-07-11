@@ -1,0 +1,50 @@
+
+
+.wp-admin #wpadminbar #wp-admin-bar-help>.ab-item:before{
+  top: 2px;
+  content:"\f473";
+}
+
+.pull-right{
+  float: none!important;
+  display: inline-block;
+  border-left:none!important;
+  min-height: 88px!important;
+}
+.doubleheight{
+  min-height: 176px!important;
+  border-right: #EEEEEE solid 1px;
+}
+.heightX3{
+  min-height: 264px!important;
+  border-right: #EEEEEE solid 1px;
+}
+.heightX4{
+  min-height: 352px!important;
+  border-right: #EEEEEE solid 1px;
+}
+
+.acf-repeater .acf-row.-collapsed > .acf-fields > .acf-faq-question {
+  width:100%!important;
+}
+.faq-acf-fields .acf-field-message{
+  padding:none;
+  background:#2a9bd9;
+  height: 23px;
+}
+.faq-acf-fields .acf-field-message + .acf-feild{
+  display:none!important;
+}
+.faq-acf-fields .acf-field-message p{
+  margin:-9px 0 0 0;
+  color:#fff;
+}
+.faq-acf-fields .acf-field-message .acf-label{
+  display:none;
+}
+.-collapsed .acf-label{
+  display:none;
+}
+.acf-repeater .acf-row.-collapsed > .acf-fields > .acf-field.-collapsed-target.hidden-by-conditional-logic{
+  display:none!important;
+}

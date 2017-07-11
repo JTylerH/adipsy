@@ -1,0 +1,74 @@
+.leapbg(@color){
+  .title{
+    background-color:@color;
+    &:hover{background-color:darken(@color,5%)}
+  }
+}
+
+.leap-dept-dropdowns{
+  margin-top:40px;
+  margin-bottom:40px;
+  .leap-dept-dropdown{
+    .title{
+      padding:30px;
+      cursor:pointer;
+      transition:background .3s ease;
+      position:relative;
+      @media(min-width:768px){
+        &:after{
+            content:" ";
+            display: inline-block;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            width: 10px;
+            height: 10px;
+            position:absolute;
+            right:30px;
+            top:50%;
+            .transform(translate(0,-50%),rotate(45deg));
+            .transition(transform .3s ease);
+        }
+      }
+    }
+    &.shown{
+      .title{
+        @media(min-width:768px){
+          &:after{
+            content:" ";
+            display: inline-block;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            width: 10px;
+            height: 10px;
+            right:30px;
+            top:50%;
+            .transform(translate(0,-50%),rotate(225deg));
+          }
+        }
+      }
+    }
+    .content{
+      display:none;
+      background-color:@blueshade0;
+      padding:30px 15px;
+      .clearfix;
+      p{
+        max-width:600px;
+        margin: 0 auto;
+      }
+      @media(max-width:767px){
+        p{
+          // text-align:left;
+        }
+      }
+    }
+  }
+  .leap-dept-dropdown{
+    &:nth-child(4n+1){.leapbg(@blue)}
+    &:nth-child(4n+2){.leapbg(@blueshade4)}
+    &:nth-child(4n+3){.leapbg(@blueshade3)}
+    &:nth-child(4n+4){.leapbg(@blueshade2)}
+    // &:nth-child(6n+5){.leapbg(@blueshade3)}
+    // &:nth-child(6n+6){.leapbg(@blueshade4)}
+  }
+}

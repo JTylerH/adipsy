@@ -1,0 +1,33 @@
+.flex-double{
+  .text-center;
+  h2, p, ul{
+    max-width:480px;
+    margin:0 auto;
+    padding-bottom:40px;
+  }
+  p{
+    .text-justify;
+    text-align-last:center;
+  }
+  ul{
+    .text-left;
+    padding-left: 20px;
+  }
+  [class^="col"]{
+    padding:5vw 60px;
+    background-size: cover;
+    background-position: center;
+  }
+  [class^="col"]>*:last-child{
+    // padding-bottom:0;
+  }
+}
+.wc-dc{
+  [class^="col"]:first-child{
+    background-position:top;
+  }
+}
+
+.bg-div{
+  .clearfix;
+}

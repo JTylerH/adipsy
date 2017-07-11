@@ -1,0 +1,278 @@
+// black border black text / black bg white text
+// white border white text / orange bg white text
+// orange border orange text / orange bg white text
+// orange bg white text / dark orange white text
+// blue bg white text / lightblue white text
+// pink border pink text / pink bg white text
+
+.btn{
+  text-transform:uppercase;
+  padding:7px 18px;
+  border-width:1px;
+  font-weight: normal;
+  transition: all .3s ease;
+  &:focus {
+    outline: none;
+    .user-select(none);
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+  }
+  &:focus, &:hover, &:active{
+    box-shadow: none;
+  }
+}
+
+.btn-blue{
+  border-color:@adipsy_blue;
+  color:@white;
+  background:@adipsy_blue;
+  &:hover, &:focus{
+    border-color:@adipsy_bluedark;
+    color:@white;
+    background:@adipsy_bluedark;
+  }
+}
+.btn-red{
+  border-color:@adipsy_red;
+  color:@white;
+  background:@adipsy_red;
+  &:hover, &:focus{
+    border-color:@adipsy_reddark;
+    color:@white;
+    background:@adipsy_reddark;
+  }
+}
+.btn-purple{
+  border-color:@adipsy_purple;
+  color:@white;
+  background:@adipsy_purple;
+  &:hover, &:focus{
+    border-color:@adipsy_purpledark;
+    color:@white;
+    background:@adipsy_purpledark;
+  }
+}
+.btn-green{
+  border-color:@adipsy_green;
+  color:@white;
+  background:@adipsy_green;
+  &:hover, &:focus{
+    border-color:@adipsy_greendark;
+    color:@white;
+    background:@adipsy_greendark;
+  }
+}
+.btn-yellow{
+  border-color:@adipsy_yellow;
+  color:@white;
+  background:@adipsy_yellow;
+  &:hover, &:focus{
+    border-color:@adipsy_yellowdark;
+    color:@white;
+    background:@adipsy_yellowdark;
+  }
+}
+
+
+.top-nav-btn-mixin(){
+  a{
+    transition: all .3s ease;
+    padding:7px 18px;
+    border:1px solid @adipsy_blue;
+    border-radius:5px;
+    color:@white;
+    background:@adipsy_blue;
+    &:hover, &:focus{
+      border-color:@adipsy_bluedark;
+      color:@white;
+      background:@adipsy_bluedark;
+    }
+  }
+}
+.top-nav-btn{
+  .top-nav-btn-mixin()!important;
+}
+
+.btn-default{
+  border-color:@white;
+  color:@white;
+  background:transparent;
+  &:hover, &:focus{
+    border-color:@orange;
+    color:@white;
+    background:@orange;
+  }
+}
+
+.btn-link{
+  border:none;
+  padding:0;
+
+  color:@blue;
+  background:transparent;
+  &:hover, &:focus{
+    color:@blueshade4;
+  }
+}
+.btn-link-white{
+  border:none;
+  padding:0;
+
+  color:rgba(255,255,255,.8);
+  background:transparent;
+  &:hover, &:focus{
+    color:@white;
+  }
+}
+
+.btn-graylight{
+  border-color:@offwhite;
+  color:@black;
+  background:@offwhite;
+  &:hover, &:focus{
+    border-color:@graylight;
+    color:@black;
+    background:@graylight;
+  }
+}
+
+.btn-white-hollow{
+  border-color:@white;
+  color:@white;
+  background:transparent;
+  &:hover, &:focus{
+    border-color:@orange;
+    color:@white;
+    background:@orange;
+  }
+}
+
+.btn-white-hollow-alt{
+  border-color:@white;
+  color:@white;
+  background:transparent;
+  &:hover, &:focus{
+    border-color:@black;
+    color:@white;
+    background:@black;
+  }
+}
+
+.btn-black-hollow{
+  border-color:@black;
+  color:@black;
+  background:transparent;
+  &:hover, &:focus{
+    border-color:@black;
+    color:@white;
+    background:@black;
+  }
+}
+
+.btn-orange-hollow{
+  border-color:@orange;
+  color:@orange;
+  background:transparent;
+  &:hover, &:focus{
+    border-color:@orange;
+    color:@white;
+    background:@orange;
+  }
+}
+
+.btn-orange{
+  border-color:@orange;
+  color:@white;
+  background:@orange;
+  &:hover, &:focus{
+    border-color:@orangedark;
+    color:@white;
+    background:@orangedark;
+  }
+}
+
+.btn-bluedark, .ebutton{
+  border-color:@blueshade2;
+  color:@white;
+  background:@blueshade2;
+  &:hover, &:focus{
+    border-color:@blueshade3;
+    color:@white;
+    background:@blueshade3;
+  }
+}
+
+.btn-pink-hollow{
+  border-color:@pinklight;
+  color:@pink;
+  background:transparent;
+  &:hover, &:focus{
+    border-color:@pink;
+    color:@white;
+    background:@pink;
+  }
+}
+
+.btn-military-hollow{
+  border-color:@white;
+  color:@white;
+  background:transparent;
+  &:hover, &:focus{
+    border-color:darken(@greenmilitary,20%);
+    color:@white;
+    background:darken(@greenmilitary,20%);
+  }
+}
+
+.ebutton{
+  padding:7px 18px;
+  display:block;
+}
+
+a.imagelink{
+  position:relative;
+  span{
+    transition:all .3s ease;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+  &:hover{
+    .btn-white-hollow{
+      border-color:@orange;
+      color:@white;
+      background:@orange;
+    }
+  }
+}
+
+.flex-buttons{
+  .btn{
+    margin: 0 30px;
+  }
+}
+
+div.more{
+  .more-content{
+      display:none;
+  }
+}
+
+.button-repeater{
+  .btn{
+    // display:block;
+    margin:15px;
+  }
+  &.has-1-buttons{
+    .btn{
+      margin-left:0;
+      margin-right:0;
+    }
+  }
+  @media(min-width:@navbreakpoint){
+    .btn{
+      display:inline-block;;
+    }
+  }
+}

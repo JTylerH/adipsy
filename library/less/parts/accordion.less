@@ -1,0 +1,113 @@
+section.flex-faq{
+  // padding-bottom:0;
+}
+
+.accordion-box{
+  border:1px solid @graylight;
+  background:@offwhite;
+  margin-bottom:15px;
+}
+.accordion-header{
+  padding: 20px 30px;
+  position:relative;
+  cursor:pointer;
+  color:@graydarker;
+  transition:all .3s ease;
+  // text-align:center;
+  h3{
+    margin:0;
+  }
+  &:hover, &.open{
+    color:@blue;
+    &:after{
+      border-bottom-color: @blue;
+    }
+  }
+  &:after{
+    content:"";
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid @graydarker;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    .transition(all.3s ease);
+    position: absolute;
+    top: 50%;
+    right:30px;
+    .translateY(-50%);
+
+  }
+  &.open{
+    &:after{
+      top:45%;
+      .transform(rotate(-181deg));
+    }
+  }
+}
+.accordion-content{
+  padding: 0 30px 30px 30px;
+  display:none;
+  position:relative;
+  .divide{
+    width:100%;
+    display:block;
+    border-top:1px dashed @graylight;
+    top:0;
+    margin-bottom:30px;
+    // margin-top:15px;
+  }
+}
+.accordion-question{
+  cursor:pointer;
+  // display:inline-block;
+  font-weight:normal;
+  position:relative;
+  padding-left: 20px;
+  padding-bottom:15px;
+  padding-top:15px;
+  &:not(:nth-last-child(2)){ border-bottom:1px dashed @graylight; }
+  top:0;
+
+  &:before{
+    content:"";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid @blue;
+    .transition(all .3s ease);
+    position: absolute;
+    top: 28px;
+    left:0;
+    .translateY(-50%);
+  }
+  &.open{
+    border:none;
+    &:before{
+      top:24px;
+      .transform(rotate(90deg));
+    }
+    &:not(:nth-last-child(2)) + .accordion-answer{
+      border-bottom:1px dashed @graylight;
+    }
+  }
+}
+.accordion-answer{
+  text-align:justify;
+  display:none;
+  padding-top:10px;
+  padding-bottom:15px;
+  p:last-child{
+    margin-bottom:0;
+  }
+  input:not(.btn), textarea{
+    margin-bottom:15px;
+    border-color:@graylight;
+  }
+  .text-center{
+    text-align:left;
+  }
+  .btn{
+    .btn-blue;
+  }
+}
