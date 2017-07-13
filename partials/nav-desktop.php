@@ -6,7 +6,7 @@ $theID = $wp_query->post->ID;
 ?>
 
 <nav role="navigation" class="container nav-lg <?php the_field('nav_color', $theID ); ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
-  <a href="<?php bloginfo( 'url' ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/library/img/logo.png"></a>
+  <a href="<?php bloginfo( 'url' ); ?>" class="logo"><img src="<?php the_field('logo','options') ?>"></a>
   <?php wp_nav_menu(array(
              'container' => false,                           // remove nav container
              'container_class' => 'navbar navbar-default',                 // class of container (should you choose to use it)

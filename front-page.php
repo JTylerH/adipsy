@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+	$btnrep = "";
+	$btncount = 0;
+	get_header(); ?>
 	<?php get_template_part( 'partials/page', 'header' ); ?>
 	<section class="bg-y">
 		<div class="container">
@@ -42,8 +45,29 @@
 						<figcaption class="txt-r">Homes of Hope</figcaption>
 					</figure>
 					<div class="content">
-						<p>Adipsy's Homes of Hope provides a time of rest from the difficulties that come with battling cancer. It is a getaway for, not only the individual suffering from cancer, but for their family. This time will allow them to relax, rejuvenate, and restore their relationships and health. Time is the only thing we will never get back, so what we do with it matters most.</p>
-						<a href="#" class="btn btn-red">Get More Info</a>
+						<p><?php the_field('homes_of_hope_desc'); ?></p>
+						<?php
+							if( have_rows('homes_of_hope_button_repeater') ):
+				      $btncount = 0;
+							$btnrep = "";
+				      while ( have_rows('homes_of_hope_button_repeater') ) : the_row();
+				        if (get_sub_field('button_show')):
+				          $btncount++;
+				          $btntext = get_sub_field('button_text');
+				          $btnstyle = get_sub_field('button_style');
+				          $btnpagelink = get_sub_field('button_pagelink');
+				          $btncustomlink = get_sub_field('button_customlink');
+				          $btnnewtab = (get_sub_field('button_newtab')=="yes") ? "_blank" : "_self" ;
+				          $btnlink = (get_sub_field('button_linktype')=="true") ? $btnpagelink : $btncustomlink;
+				          $btnrep = $btnrep.'<a href="'.$btnlink.'" class="btn '.$btnstyle.'" target="'.$btnnewtab.'">'.$btntext.'</a>';
+				        endif;
+				      endwhile; ?>
+							<div class="button-repeater has-<?php echo $btncount ?>-buttons">
+					      <?php echo $btnrep; ?>
+					    </div>
+							<?php
+				    endif;
+				    ?>
 					</div>
 				</div>
 				<div id="desc-2" style="display:none;">
@@ -52,8 +76,29 @@
 						<figcaption class="txt-p">Strength Keepers</figcaption>
 					</figure>
 					<div class="content">
-						<p>Adipsy’s Strength Keepers provide food to hospitals and homes throughout the community every week. Whether it's providing pastries during treatment or groceries for families. The help provided by Strength Keepers allows families affected by cancer to focus on being together.</p>
-						<a href="#" class="btn btn-purple">Get More Info</a>
+						<p><?php the_field('strength_keepers_desc'); ?></p>
+						<?php
+							if( have_rows('strength_keepers_button_repeater') ):
+				      $btncount = 0;
+							$btnrep = "";
+				      while ( have_rows('strength_keepers_button_repeater') ) : the_row();
+				        if (get_sub_field('button_show')):
+				          $btncount++;
+				          $btntext = get_sub_field('button_text');
+				          $btnstyle = get_sub_field('button_style');
+				          $btnpagelink = get_sub_field('button_pagelink');
+				          $btncustomlink = get_sub_field('button_customlink');
+				          $btnnewtab = (get_sub_field('button_newtab')=="yes") ? "_blank" : "_self" ;
+				          $btnlink = (get_sub_field('button_linktype')=="true") ? $btnpagelink : $btncustomlink;
+				          $btnrep = $btnrep.'<a href="'.$btnlink.'" class="btn '.$btnstyle.'" target="'.$btnnewtab.'">'.$btntext.'</a>';
+				        endif;
+				      endwhile; ?>
+							<div class="button-repeater has-<?php echo $btncount ?>-buttons">
+					      <?php echo $btnrep; ?>
+					    </div>
+							<?php
+				    endif;
+				    ?>
 					</div>
 				</div>
 				<div id="desc-3" style="display:none;">
@@ -62,8 +107,29 @@
 						<figcaption class="txt-g">Support Groups</figcaption>
 					</figure>
 					<div class="content">
-						<p>Adipsy provides support groups for people suffering from cancer. These groups meet every month in the Hampton Roads area. For more information on the different support groups please contact us at info@adipsy.org</p>
-						<a href="#" class="btn btn-green">Get More Info</a>
+						<p><?php the_field('support_groups_desc'); ?></p>
+						<?php
+							if( have_rows('support_groups_button_repeater') ):
+				      $btncount = 0;
+							$btnrep = "";
+				      while ( have_rows('support_groups_button_repeater') ) : the_row();
+				        if (get_sub_field('button_show')):
+				          $btncount++;
+				          $btntext = get_sub_field('button_text');
+				          $btnstyle = get_sub_field('button_style');
+				          $btnpagelink = get_sub_field('button_pagelink');
+				          $btncustomlink = get_sub_field('button_customlink');
+				          $btnnewtab = (get_sub_field('button_newtab')=="yes") ? "_blank" : "_self" ;
+				          $btnlink = (get_sub_field('button_linktype')=="true") ? $btnpagelink : $btncustomlink;
+				          $btnrep = $btnrep.'<a href="'.$btnlink.'" class="btn '.$btnstyle.'" target="'.$btnnewtab.'">'.$btntext.'</a>';
+				        endif;
+				      endwhile; ?>
+							<div class="button-repeater has-<?php echo $btncount ?>-buttons">
+					      <?php echo $btnrep; ?>
+					    </div>
+							<?php
+				    endif;
+				    ?>
 					</div>
 				</div>
 				<div id="desc-4" style="display:none;">
@@ -72,8 +138,29 @@
 						<figcaption class="txt-y">Community Events</figcaption>
 					</figure>
 					<div class="content">
-						<p>Adipsy believes each person who is battling cancer should be able to get out of their everyday environment and have fun with the community. This is an opportunity for family and friends to enjoy time away from the hospital and to create memories that will last a lifetime.</p>
-						<a href="#" class="btn btn-yellow">Get More Info</a>
+						<p><?php the_field('community_events_desc'); ?></p>
+						<?php
+							if( have_rows('community_events_button_repeater') ):
+				      $btncount = 0;
+							$btnrep = "";
+				      while ( have_rows('community_events_button_repeater') ) : the_row();
+				        if (get_sub_field('button_show')):
+				          $btncount++;
+				          $btntext = get_sub_field('button_text');
+				          $btnstyle = get_sub_field('button_style');
+				          $btnpagelink = get_sub_field('button_pagelink');
+				          $btncustomlink = get_sub_field('button_customlink');
+				          $btnnewtab = (get_sub_field('button_newtab')=="yes") ? "_blank" : "_self" ;
+				          $btnlink = (get_sub_field('button_linktype')=="true") ? $btnpagelink : $btncustomlink;
+				          $btnrep = $btnrep.'<a href="'.$btnlink.'" class="btn '.$btnstyle.'" target="'.$btnnewtab.'">'.$btntext.'</a>';
+				        endif;
+				      endwhile; ?>
+							<div class="button-repeater has-<?php echo $btncount ?>-buttons">
+					      <?php echo $btnrep; ?>
+					    </div>
+							<?php
+				    endif;
+				    ?>
 					</div>
 				</div>
 			</div>
@@ -87,7 +174,7 @@
 		</div>
 	</section>
 	<section class="bg-w">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="get-involved">
 				<a href="#" class="get-involved-block" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/img/journey.jpg);">
 					<div class="overlay bg-b"></div>
@@ -108,90 +195,18 @@
 		</div>
 	</section>
 	<?php get_template_part( 'partials/acf', 'flex' ); ?>
-
-
-
-	<section class="bg-blue section-event">
+	<?php if( have_rows('sponsors', 'option') ): ?>
+	<section class="bg-ow">
 		<div class="container">
-			<div class="row event-row">
-				<?php if( have_rows('featured_items') ): ?>
-					<?php while ( have_rows('featured_items') ) : the_row(); ?>
-						<?php if(get_sub_field('date')):
-										$date = get_sub_field('date');
-										$date = new DateTime($date);
-									endif;
-									$linktype = get_sub_field('link_type');
-									$btnlink = "";
-									$btnpagelink = get_sub_field('pagelink');
-					        $btncustomlink = get_sub_field('customlink');
-						      $btndoclink = get_sub_field('documentlink');
-					        $btnnewtab = (get_sub_field('new_tab')=="yes") ? "_blank" : "_self" ;
-					        switch($linktype):
-					          case "pagelink" : $btnlink = $btnpagelink; break;
-					          case "customlink" : $btnlink = $btncustomlink; break;
-					          case "documentlink" : $btnlink = $btndoclink; break;
-					        endswitch;
-						?>
-						<div class="event-block-container">
-							<div class="event-block">
-								<?php if ($linktype != "false"): echo '<a href="'.$btnlink.'" target="'.$btnnewtab.'">'; endif; ?>
-								<div class="etop" <?php if(get_sub_field('image')): echo 'style="background-image:url('.get_sub_field('image').');"'; endif; ?>>
-									<?php if(get_sub_field('date')): ?>
-									<div class="emon">
-										<?php echo $date->format('M'); ?>
-									</div>
-									<div class="eday">
-										<?php echo $date->format('d'); ?>
-									</div>
-									<?php endif; ?>
-								</div>
-								<div class="ebottom">
-									<div class="edefine">
-										<?php the_sub_field('content'); ?>
-									</div>
-									<?php
-									// <!-- <a href="#" class="btn ebutton">
-									// 	View More
-									// </a> -->
-									?>
-								</div>
-								<?php if ($linktype != "false"): echo '</a>'; endif; ?>
-							</div>
-						</div>
-				    <?php endwhile; ?>
-				<?php endif; ?>
+			<div class="sponsors lS-controls-dark">
+				<h2 class="txt-k text-center">Thank you to our sponsors!</h2>
+				<ul id="sponsor-slider">
+					<?php while ( have_rows('sponsors', 'option') ) : the_row(); ?>
+						<li><a href="<?php the_sub_field('link'); ?>" target="_blank"><img src="<?php the_sub_field('image'); ?>"></a></li>
+					<?php endwhile; ?>
+				</ul>
 			</div>
 		</div>
 	</section>
-	<section class="bg-blue section-quote">
-		<div class="container">
-				<div class="single-quote">
-					<div class="the-quote"><?php the_field('twitter_quote'); ?></div>
-					<a href="<?php the_field('twitter_user_url'); ?>" class="the-attrib" target="_blank"><i class="fa fa-twitter"></i> <?php the_field('twitter_user'); ?></a>
-				</div>
-		</div>
-	</section>
-	<section class="bg-blue section-viewblog hide">
-		<div class="container">
-			<a class="btn btn-white-hollow" href="#">View Blog</a>
-		</div>
-	</section>
-	<?php if( have_rows('corporate_donors_home', 'option') ): ?>
-		<section class="bg-blue academic-track text-centerjustify">
-			<div class="container">
-				<div class="row">
-						<h2>Thank You To Our Corporate Donors</h2>
-						<?php while ( have_rows('corporate_donors_home', 'option') ) : the_row(); ?>
-							<div class="col-sm-6 col-md-15 text-center" style="margin-top:30px;margin-bottom:50px;">
-								<a href="<?php the_sub_field('link'); ?>" target="_blank">
-									<img src="<?php the_sub_field('image'); ?>" style="width:100%;max-width:170px;">
-								</a>
-							</div>
-						<?php endwhile; ?>
-						<a href="<?php bloginfo('url'); ?>/donors/" class="btn btn-link-white">View full list of donors</a>
-				</div>
-			</div>
-		</section>
-
 	<?php endif; ?>
 <?php get_footer(); ?>

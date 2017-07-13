@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 footer-logo">
-				<img class="logo" src="<?php echo get_template_directory_uri(); ?>/library/img/wlc_logo.png">
+				<img class="logo" src="<?php the_field('logo','options') ?>">
 				<a href='mailto:<?php the_field('main_email','options') ?>'><?php the_field('main_email','options') ?></a>
 				<a class="phone" href="<?php the_field('main_phone_link','options') ?>"><?php the_field('main_phone','options') ?></a>
 				<a class="address" href="<?php the_field('address_link','options') ?>" target="_blank"><?php the_field('address','options') ?></a>

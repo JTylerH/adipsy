@@ -1,4 +1,5 @@
 //DONATE BAR ON HOMEPAGE
+//===========================
 div.donate-bar{
   .clearfix;
   padding:30px 0;
@@ -26,6 +27,7 @@ div.donate-bar{
 }
 
 //HOW WE HELP ICONIC NAV
+//=============================
 div.howwehwelp{
   padding-top:45px;
   h2{
@@ -36,24 +38,53 @@ ul.howwehelp-nav{
   .clearfix;
   .listreset();
   padding:15px 0 0 0;
+  @media(max-width:699px){
+    margin:0 -30px;
+  }
+  @media(max-width:480px){
+    margin:0 -15px;
+  }
   li{
     cursor:pointer;
     display:inline-block;
-    width:25%;
+    width:50%;
     float:left;
     text-align:center;
-    padding-bottom:15px;
+    padding:15px;
     border-bottom:3px solid transparent;
     transition: border-color .2s ease;
+    img{
+      border-radius:50%;
+      border:@white 4px solid;
+    }
     &.active{
-      &.r{border-bottom-color:@adipsy_red}
-      &.p{border-bottom-color:@adipsy_purple}
-      &.g{border-bottom-color:@adipsy_green}
-      &.y{border-bottom-color:@adipsy_yellow}
+      @media(max-width:699px){
+        color:@white;
+      }
+      &.r{background-color:@adipsy_red}
+      &.p{background-color:@adipsy_purple}
+      &.g{background-color:@adipsy_green}
+      &.y{background-color:@adipsy_yellow}
+    }
+    @media(min-width:700px){
+      padding:0 0 15px 0;
+      width:25%;
+      &.active{
+        &.r, &.p, &.g, &.y{background:none;}
+        &.r{border-bottom-color:@adipsy_red}
+        &.p{border-bottom-color:@adipsy_purple}
+        &.g{border-bottom-color:@adipsy_green}
+        &.y{border-bottom-color:@adipsy_yellow}
+      }
+      &:hover{
+        img{
+          transform: scale(1.1);
+        }
+      }
     }
     img{
       transition:transform .2s ease;
-      padding-bottom:10px;
+      margin-bottom:10px;
       height:80px;
     }
     p{
@@ -61,11 +92,7 @@ ul.howwehelp-nav{
       font-weight:500;
       font-size:18px;
     }
-    &:hover{
-      img{
-        transform: scale(1.1);
-      }
-    }
+
   }
 }
 .howwehelp-desc{
@@ -91,9 +118,14 @@ ul.howwehelp-nav{
     text-align:justify;
     text-align-last: center;
     padding:30px 0 0 0;
+    .button-repeater .btn{
+      margin:0 5px 12.5px 5px;
+    }
   }
 }
 
+//GET INVOLVED
+//============================
 .get-involved-title{
   position:relative;
   padding:15px 0 15px 0;
@@ -115,24 +147,43 @@ ul.howwehelp-nav{
 
 .get-involved{
   .clearfix;
-  padding:30px 0;
+  padding:15px 0;
   margin:0 auto;
   a.get-involved-block{
+    margin:15px 0;
     color:@white;
     position:relative;
     border-radius:3px;
-    background-size:auto 100%;
-    background-position:center;
-    height:300px;
-    width:30%;
-    margin:0 1.5%;
+    background-size: cover;
+    background-position: center;
+    height: 190px;
+    width: 100%;
+    padding: 30px;
+    @media(min-width:560px){
+      background-size: 40%;
+      background-position: left;
+      padding: 30px 30px 30px 40%;
+    }
+    @media(min-width:700px){
+      background-size:auto 100%;
+      background-position:center;
+      height:230px;
+      width:30%;
+      padding:30px;
+      margin:15px 1.5%;
+      &:hover{
+        background-size:auto 105%;
+      }
+    }
+    @media(min-width:768px){
+      height:265px;
+    }
+    @media(min-width:880px){
+      height:300px;
+    }
     float:left;
     display:inline;
-    padding:30px;
     transition:background .2s ease;
-    &:hover{
-      background-size:auto 105%;
-    }
     .overlay{
       position:absolute;
       top:0;
@@ -140,14 +191,31 @@ ul.howwehelp-nav{
       bottom:0;
       left:0;
       opacity:.75;
+      @media(min-width:560px){
+        opacity:1;
+        left:35%;
+      }
+      @media(min-width:700px){
+        left:0;
+        opacity:.75;
+      }
     }
     h3{
       margin:0;
-      font-size:37px;
+      font-size: 24px;
       font-weight:500;
       z-index: 0;
       position: relative;
       line-height:1em;
+      @media(min-width:680px){
+        font-size:26px
+      }
+      @media(min-width:768px){
+        font-size:29px
+      }
+      @media(min-width:880px){
+        font-size:37px
+      }
     }
     p{
       position:absolute;
@@ -161,5 +229,14 @@ ul.howwehelp-nav{
       }
     }
 
+  }
+}
+
+//Sponsor Slider
+//=========================
+div.sponsors{
+  padding:60px 0;
+  h2{
+    padding-bottom:30px;
   }
 }

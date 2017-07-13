@@ -267,23 +267,31 @@ if (!current_user_can('edit_posts')) {
 
 /* Advanced Custom Fields */
 /*===========================================*/
-// acf_add_options_page(array(
-//  'page_title' 	=> 'Corporate Donors',
-//  'menu_title'	=> 'Corp. Donors',
-//  'menu_slug' 	=> 'donors-settings',
-//  'icon_url'     => 'dashicons-groups',
-//  'position'     => '29',
-//  'capability'	=> 'edit_posts',
-// ));
-//
-// acf_add_options_page(array(
-//  'page_title' 	=> 'General',
-//  'menu_title'	=> 'General',
-//  'menu_slug' 	=> 'general-theme-settings',
-//  'icon_url'     => 'dashicons-admin-generic',
-//  'position'     => '30',
-//  'capability'	=> 'edit_posts',
-// ));
+acf_add_options_page(array(
+ 'page_title' 	=> 'Sponsors',
+ 'menu_title'	=> 'Sponsors',
+ 'menu_slug' 	=> 'sponsors-settings',
+ 'icon_url'     => 'dashicons-groups',
+ 'position'     => '29',
+ 'capability'	=> 'edit_posts',
+));
+acf_add_options_page(array(
+ 'page_title' 	=> 'Home Page',
+ 'menu_title'	=> 'Home',
+ 'menu_slug' 	=> 'home-page-settings',
+ 'icon_url'     => 'dashicons-admin-home',
+ 'position'     => '28',
+ 'capability'	=> 'edit_posts',
+));
+
+acf_add_options_page(array(
+ 'page_title' 	=> 'General',
+ 'menu_title'	=> 'General',
+ 'menu_slug' 	=> 'general-theme-settings',
+ 'icon_url'     => 'dashicons-admin-generic',
+ 'position'     => '30',
+ 'capability'	=> 'edit_posts',
+));
 
 // acf_add_options_page(array(
 //  'page_title' 	=> 'Frequently Asked Questions',

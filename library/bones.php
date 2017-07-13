@@ -170,7 +170,7 @@ function bones_scripts_and_styles() {
 
 
 		$host = $_SERVER['SERVER_NAME'];
-		if($host == 'localhost') {
+		if($host == 'vccw.dev') {
 		    wp_enqueue_script( 'livereload-js' );
 		}
 

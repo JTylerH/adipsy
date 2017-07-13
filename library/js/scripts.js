@@ -229,4 +229,36 @@ if($('.mid-menu-cont').length){
 			.siblings().hide().end().fadeIn();
 	});
 
-}); /* end of as page load scripts */
+});
+
+/* end of as page load scripts */
+
+$(document).ready(function() {
+  $('#sponsor-slider').lightSlider({
+      item:4,
+      loop:true,
+      slideMove:4,
+      easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+      speed:600,
+			slideMargin:0.1,
+			pager:false,
+      responsive : [
+          {
+              breakpoint:991,
+              settings: {
+                  item:3,
+                  slideMove:3,
+									controls:false
+                }
+          },
+          {
+              breakpoint:550,
+              settings: {
+                  item:2,
+                  slideMove:2,
+									controls:false
+                }
+          }
+      ]
+  });
+});

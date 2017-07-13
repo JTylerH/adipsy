@@ -1,0 +1,28 @@
+.lS-controls-dark{
+  .lSAction > a {
+    background-image: url(../img/controls_dark.png);
+  }
+}
+#sponsor-slider{
+  .lslide, .clone{
+    text-align:center;
+    height:100px!important;
+    position:relative;
+    >a, >img{
+      padding:0 30px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+  }
+}
+
+.lSAction > a {
+  &.lSPrev{
+    left:0;
+  }
+  &.lSNext{
+    right:0;
+  }
+}

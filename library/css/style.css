@@ -372,6 +372,31 @@
   cursor: -ms-grabbing;
   cursor: grabbing;
 }
+.lS-controls-dark .lSAction > a {
+  background-image: url(../img/controls_dark.png);
+}
+#sponsor-slider .lslide,
+#sponsor-slider .clone {
+  text-align: center;
+  height: 100px!important;
+  position: relative;
+}
+#sponsor-slider .lslide > a,
+#sponsor-slider .clone > a,
+#sponsor-slider .lslide > img,
+#sponsor-slider .clone > img {
+  padding: 0 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lSAction > a.lSPrev {
+  left: 0;
+}
+.lSAction > a.lSNext {
+  right: 0;
+}
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -10333,7 +10358,7 @@ header.fullscreen .overlay {
 }
 @media (min-width: 600px) {
   .home header {
-    padding: 12vw 0 8vw 0;
+    padding: 13vw 0 10vw 0;
   }
   .home header.wh {
     height: calc(100% - 51px);
@@ -12908,40 +12933,83 @@ ul.howwehelp-nav:after {
 ul.howwehelp-nav:after {
   clear: both;
 }
+@media (max-width: 699px) {
+  ul.howwehelp-nav {
+    margin: 0 -30px;
+  }
+}
+@media (max-width: 480px) {
+  ul.howwehelp-nav {
+    margin: 0 -15px;
+  }
+}
 ul.howwehelp-nav li {
   cursor: pointer;
   display: inline-block;
-  width: 25%;
+  width: 50%;
   float: left;
   text-align: center;
-  padding-bottom: 15px;
+  padding: 15px;
   border-bottom: 3px solid transparent;
   transition: border-color 0.2s ease;
 }
+ul.howwehelp-nav li img {
+  border-radius: 50%;
+  border: #fff 4px solid;
+}
+@media (max-width: 699px) {
+  ul.howwehelp-nav li.active {
+    color: #fff;
+  }
+}
 ul.howwehelp-nav li.active.r {
-  border-bottom-color: #F96F76;
+  background-color: #F96F76;
 }
 ul.howwehelp-nav li.active.p {
-  border-bottom-color: #9B6FC6;
+  background-color: #9B6FC6;
 }
 ul.howwehelp-nav li.active.g {
-  border-bottom-color: #51B6AA;
+  background-color: #51B6AA;
 }
 ul.howwehelp-nav li.active.y {
-  border-bottom-color: #FED531;
+  background-color: #FED531;
+}
+@media (min-width: 700px) {
+  ul.howwehelp-nav li {
+    padding: 0 0 15px 0;
+    width: 25%;
+  }
+  ul.howwehelp-nav li.active.r,
+  ul.howwehelp-nav li.active.p,
+  ul.howwehelp-nav li.active.g,
+  ul.howwehelp-nav li.active.y {
+    background: none;
+  }
+  ul.howwehelp-nav li.active.r {
+    border-bottom-color: #F96F76;
+  }
+  ul.howwehelp-nav li.active.p {
+    border-bottom-color: #9B6FC6;
+  }
+  ul.howwehelp-nav li.active.g {
+    border-bottom-color: #51B6AA;
+  }
+  ul.howwehelp-nav li.active.y {
+    border-bottom-color: #FED531;
+  }
+  ul.howwehelp-nav li:hover img {
+    transform: scale(1.1);
+  }
 }
 ul.howwehelp-nav li img {
   transition: transform .2s ease;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   height: 80px;
 }
 ul.howwehelp-nav li p {
   margin-bottom: 0;
   font-weight: 500;
   font-size: 18px;
-}
-ul.howwehelp-nav li:hover img {
-  transform: scale(1.1);
 }
 .howwehelp-desc {
   padding: 60px 0;
@@ -12983,6 +13051,9 @@ ul.howwehelp-nav li:hover img {
   text-align-last: center;
   padding: 30px 0 0 0;
 }
+.howwehelp-desc .content .button-repeater .btn {
+  margin: 0 5px 12.5px 5px;
+}
 .get-involved-title {
   position: relative;
   padding: 15px 0 15px 0;
@@ -13002,7 +13073,7 @@ ul.howwehelp-nav li:hover img {
   bottom: -10px;
 }
 .get-involved {
-  padding: 30px 0;
+  padding: 15px 0;
   margin: 0 auto;
 }
 .get-involved:before,
@@ -13022,21 +13093,48 @@ ul.howwehelp-nav li:hover img {
   clear: both;
 }
 .get-involved a.get-involved-block {
+  margin: 15px 0;
   color: #fff;
   position: relative;
   border-radius: 3px;
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
-  height: 300px;
-  width: 30%;
-  margin: 0 1.5%;
+  height: 190px;
+  width: 100%;
+  padding: 30px;
   float: left;
   display: inline;
-  padding: 30px;
   transition: background .2s ease;
 }
-.get-involved a.get-involved-block:hover {
-  background-size: auto 105%;
+@media (min-width: 560px) {
+  .get-involved a.get-involved-block {
+    background-size: 40%;
+    background-position: left;
+    padding: 30px 30px 30px 40%;
+  }
+}
+@media (min-width: 700px) {
+  .get-involved a.get-involved-block {
+    background-size: auto 100%;
+    background-position: center;
+    height: 230px;
+    width: 30%;
+    padding: 30px;
+    margin: 15px 1.5%;
+  }
+  .get-involved a.get-involved-block:hover {
+    background-size: auto 105%;
+  }
+}
+@media (min-width: 768px) {
+  .get-involved a.get-involved-block {
+    height: 265px;
+  }
+}
+@media (min-width: 880px) {
+  .get-involved a.get-involved-block {
+    height: 300px;
+  }
 }
 .get-involved a.get-involved-block .overlay {
   position: absolute;
@@ -13046,13 +13144,40 @@ ul.howwehelp-nav li:hover img {
   left: 0;
   opacity: .75;
 }
+@media (min-width: 560px) {
+  .get-involved a.get-involved-block .overlay {
+    opacity: 1;
+    left: 35%;
+  }
+}
+@media (min-width: 700px) {
+  .get-involved a.get-involved-block .overlay {
+    left: 0;
+    opacity: .75;
+  }
+}
 .get-involved a.get-involved-block h3 {
   margin: 0;
-  font-size: 37px;
+  font-size: 24px;
   font-weight: 500;
   z-index: 0;
   position: relative;
   line-height: 1em;
+}
+@media (min-width: 680px) {
+  .get-involved a.get-involved-block h3 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 768px) {
+  .get-involved a.get-involved-block h3 {
+    font-size: 29px;
+  }
+}
+@media (min-width: 880px) {
+  .get-involved a.get-involved-block h3 {
+    font-size: 37px;
+  }
 }
 .get-involved a.get-involved-block p {
   position: absolute;
@@ -13064,6 +13189,12 @@ ul.howwehelp-nav li:hover img {
 }
 .get-involved a.get-involved-block p img {
   display: inline;
+}
+div.sponsors {
+  padding: 60px 0;
+}
+div.sponsors h2 {
+  padding-bottom: 30px;
 }
 a[href="#noclick"] {
   pointer-events: none;
