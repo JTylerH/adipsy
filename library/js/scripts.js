@@ -150,7 +150,7 @@ jQuery(document).ready(function($) {
 	});
 
 	$('div#bars').click(function() {
-	    $('ul.header-nav').slideToggle();
+	    $('.top-nav').slideToggle();
 			$('div#bars>i').toggle();
 	});
 
@@ -248,7 +248,8 @@ $(document).ready(function() {
               settings: {
                   item:3,
                   slideMove:3,
-									controls:false
+									controls:false,
+									loop:true
                 }
           },
           {
@@ -256,7 +257,8 @@ $(document).ready(function() {
               settings: {
                   item:2,
                   slideMove:2,
-									controls:false
+									controls:false,
+									loop:true
                 }
           }
       ]

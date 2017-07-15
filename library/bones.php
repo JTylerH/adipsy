@@ -143,7 +143,7 @@ function bones_scripts_and_styles() {
 		wp_register_script( 'matchheight-js', get_stylesheet_directory_uri() . '/library/js/libs/lightslider.js', array( 'jquery' ), '', true );
 		wp_register_script( 'textfill-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.textfill.min.js', array( 'jquery' ), '', true );
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
-		wp_register_script('livereload-js', 'http://localhost:35729/livereload.js', '', '', true );
+		wp_register_script('livereload-js', 'http://192.168.1.86:35729/livereload.js', '', '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
@@ -230,12 +230,9 @@ function bones_theme_support() {
 		array(
 			'top-nav-left' => __( 'Top Menu Left', 'bonestheme' ),   // main nav in header
 			'top-nav-right' => __( 'Top Menu Right', 'bonestheme' ),
-			'footer-links' => __( 'Footer Menu', 'bonestheme' ), // secondary nav in footer
-			'about-links' => __( 'About Pages Menu Bar', 'bonestheme' ),
-			'academic-links' => __( 'Academic Pages Menu Bar', 'bonestheme' ),
-			'financial-links' => __( 'Financial Pages Menu Bar', 'bonestheme' ),
-			'currentstudent-links' => __( 'Current Students Page Menu Bar', 'bonestheme' ),
-			'home-links' => __( 'Home Page Menu Bar', 'bonestheme' )
+			'footer-1' => __( 'Footer 1', 'bonestheme' ),
+			'footer-2' => __( 'Footer 2', 'bonestheme' ),
+			'footer-3' => __( 'Footer 3', 'bonestheme' )
 		)
 	);
 

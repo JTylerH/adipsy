@@ -91,9 +91,7 @@ echo '<header '.$herotag.'role="banner" itemscope itemtype="http://schema.org/WP
           echo '<div class="bg-video"><div class="overlay" style="background-color:rgba(0,0,0,'.$overlaypercentage.')"></div><video id="bgvideo" autoplay loop preload="auto" muted webkit-playsinline playsinline><source src="'.$videourl.'"></video></div>';
         endif;
     ?>
-    <?php
-
-    if( have_rows('hero_button_repeater') ):
+    <?php if( have_rows('hero_button_repeater') ):
       $btncount = 0;
       while ( have_rows('hero_button_repeater') ) : the_row();
         if (get_sub_field('button_show')):
@@ -106,11 +104,10 @@ echo '<header '.$herotag.'role="banner" itemscope itemtype="http://schema.org/WP
           $btnlink = (get_sub_field('button_linktype')=="true") ? $btnpagelink : $btncustomlink;
           $btnrep = $btnrep.'<a href="'.$btnlink.'" class="btn '.$btnstyle.'" target="'.$btnnewtab.'">'.$btntext.'</a>';
         endif;
-      endwhile;
-    endif;
-    ?>
-    <div class="button-repeater has-<?php echo $btncount ?>-buttons">
-      <?php echo $btnrep; ?>
-    </div>
+      endwhile; ?>
+      <div class="button-repeater has-<?php echo $btncount ?>-buttons">
+        <?php echo $btnrep; ?>
+      </div>
+    <?php endif; ?>
   </div>
 </header>

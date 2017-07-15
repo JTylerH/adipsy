@@ -29,9 +29,12 @@ div.donate-bar{
 //HOW WE HELP ICONIC NAV
 //=============================
 div.howwehwelp{
-  padding-top:45px;
+  padding-top:30px;
+  @media(max-width:480px){
+    padding-top:45px;
+  }
   h2{
-    margin-bottom:30px;
+    margin-bottom:15px;
   }
 }
 ul.howwehelp-nav{
@@ -55,7 +58,15 @@ ul.howwehelp-nav{
     transition: border-color .2s ease;
     img{
       border-radius:50%;
-      border:@white 4px solid;
+      border:@white 3px solid;
+      transition:transform .2s ease;
+      margin-bottom:10px;
+      height:60px;
+    }
+    p{
+      margin-bottom:0;
+      font-weight:500;
+      font-size:18px;
     }
     &.active{
       @media(max-width:699px){
@@ -76,48 +87,61 @@ ul.howwehelp-nav{
         &.g{border-bottom-color:@adipsy_green}
         &.y{border-bottom-color:@adipsy_yellow}
       }
+      img{
+        margin-bottom:10px;
+        height:80px;
+      }
       &:hover{
         img{
           transform: scale(1.1);
         }
       }
     }
-    img{
-      transition:transform .2s ease;
-      margin-bottom:10px;
-      height:80px;
-    }
-    p{
-      margin-bottom:0;
-      font-weight:500;
-      font-size:18px;
-    }
-
   }
 }
 .howwehelp-desc{
   .clearfix;
-  padding:60px 0;
+  padding:30px 0;
   max-width: 768px;
   margin: 0 auto;
+  @media(min-width:720px){
+    padding:60px 0;
+  }
   figure{
-    float:left;
     text-align:center;
-    padding:0 30px 0 0;
     img{
-      height:200px;
+      height:140px;
     }
     figcaption{
       padding-top:15px;
       text-align:center;
       font-weight:500;
-      font-size:36px;
+      font-size:28px;
     }
+    @media(min-width:720px){
+      float:left;
+      text-align:center;
+      padding:0 30px 0 0;
+      img{
+        height:200px;
+      }
+      figcaption{
+        padding-top:15px;
+        font-size:36px;
+      }
+    }
+
   }
   .content{
     text-align:justify;
     text-align-last: center;
-    padding:30px 0 0 0;
+    padding:15px 0 0 0;
+    p{
+      margin-bottom:30px;
+    }
+    @media(min-width:720px){
+      padding:30px 0 0 0;
+    }
     .button-repeater .btn{
       margin:0 5px 12.5px 5px;
     }
@@ -150,7 +174,7 @@ ul.howwehelp-nav{
   padding:15px 0;
   margin:0 auto;
   a.get-involved-block{
-    margin:15px 0;
+    margin:7px 0;
     color:@white;
     position:relative;
     border-radius:3px;
@@ -238,5 +262,14 @@ div.sponsors{
   padding:60px 0;
   h2{
     padding-bottom:30px;
+  }
+}
+
+//Contact Us
+section.custom-contact{
+  padding:30px 0;
+  a{
+    color:@adipsy_purple;
+
   }
 }

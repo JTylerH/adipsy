@@ -276,15 +276,6 @@ acf_add_options_page(array(
  'capability'	=> 'edit_posts',
 ));
 acf_add_options_page(array(
- 'page_title' 	=> 'Home Page',
- 'menu_title'	=> 'Home',
- 'menu_slug' 	=> 'home-page-settings',
- 'icon_url'     => 'dashicons-admin-home',
- 'position'     => '28',
- 'capability'	=> 'edit_posts',
-));
-
-acf_add_options_page(array(
  'page_title' 	=> 'General',
  'menu_title'	=> 'General',
  'menu_slug' 	=> 'general-theme-settings',
@@ -292,6 +283,8 @@ acf_add_options_page(array(
  'position'     => '30',
  'capability'	=> 'edit_posts',
 ));
+
+
 
 // acf_add_options_page(array(
 //  'page_title' 	=> 'Frequently Asked Questions',
@@ -386,81 +379,81 @@ function mytheme_admin_bar_render() {
 // add_filter( 'oembed_result', 'iweb_modest_youtube_player', 10, 3 );
 
 
-// Register Custom Post Types
-// add_action('init', 'register_custom_posts_staff');
-//
-// function register_custom_posts_staff() {
-//     $members_labels = array(
-//         'name'               => 'Staff Directory',
-//         'singular_name'      => 'Faculty',
-//         'menu_name'          => 'Staff Directory',
-//         'add_new'            => 'Add New Member',
-//         'all_items'          => 'View Directory',
-//         'edit_item'          => 'Edit Member',
-//         'view_item'          => 'View Member',
-//         'view_items'          => 'View Faculty Page',
-//         'add_new_item'       => 'Add New Member',
-//         'search_items'       => 'Search Members',
-//         'not_found'          => 'No members found',
-//         'not_found_in_trash' => 'No members found in Trash'
-//
-//     );
-//     $members_args = array(
-//         'labels'             => $members_labels,
-//         'public'             => true,
-//         'capability_type'    => 'post',
-//         'has_archive'        => 'academics/faculty',
-//         'supports'           => array( 'title', 'revisions' ),
-//         'menu_icon'          => 'dashicons-admin-users',
-//         'hierarchical' => true
-//     );
-//     register_post_type('faculty', $members_args);
-//
-// }
-//
-// add_action('init', 'register_custom_posts_documents');
-//
-// function register_custom_posts_documents() {
-//     $doc_labels = array(
-//         'name'               => 'Documents',
-//         'singular_name'      => 'Document',
-//         'menu_name'          => 'Documents',
-//         'add_new'            => 'Add New Document',
-//         'all_items'          => 'View All Documents',
-//         'edit_item'          => 'Edit Document',
-//         'view_item'          => 'View Document',
-//         'view_items'         => 'View Document Archive',
-//         'add_new_item'       => 'Add New Document',
-//         'search_items'       => 'Search Documents',
-//         'not_found'          => 'No documents found',
-//         'not_found_in_trash' => 'No documents found in Trash'
-//     );
-//     $doc_args = array(
-//         'labels'             => $doc_labels,
-//         'public'             => true,
-//         'capability_type'    => 'post',
-//         'has_archive'        => 'documents',
-//         'supports'           => array( 'title', 'revisions' ),
-//         'menu_icon'          => 'dashicons-media-document'
-//     );
-//     register_post_type('documents', $doc_args);
-//
-// }
-//
-// add_filter('manage_edit-documents_columns', 'doc_columns');
-// function doc_columns($columns) {
-//     $columns['fileurl'] = 'File URL';
-//     return $columns;
-// }
-// add_action('manage_posts_custom_column',  'show_doc_columns');
-// function show_doc_columns($name) {
-//     global $post;
-//     switch ($name) :
-//         case 'fileurl':
-//             $views = get_field('file_url',$post->ID);
-//             echo $views;
-//     endswitch;
-// }
+//Register Custom Post Types
+add_action('init', 'register_custom_posts_staff');
+
+function register_custom_posts_staff() {
+    $members_labels = array(
+        'name'               => 'Staff Directory',
+        'singular_name'      => 'Staff Member',
+        'menu_name'          => 'Staff Directory',
+        'add_new'            => 'Add New Member',
+        'all_items'          => 'View Directory',
+        'edit_item'          => 'Edit Member',
+        'view_item'          => 'View Member',
+        'view_items'          => 'View Faculty Page',
+        'add_new_item'       => 'Add New Member',
+        'search_items'       => 'Search Members',
+        'not_found'          => 'No members found',
+        'not_found_in_trash' => 'No members found in Trash'
+
+    );
+    $members_args = array(
+        'labels'             => $members_labels,
+        'public'             => true,
+        'capability_type'    => 'post',
+        'has_archive'        => 'academics/faculty',
+        'supports'           => array( 'title', 'revisions' ),
+        'menu_icon'          => 'dashicons-admin-users',
+        'hierarchical' => true
+    );
+    register_post_type('faculty', $members_args);
+
+}
+
+add_action('init', 'register_custom_posts_documents');
+
+function register_custom_posts_documents() {
+    $doc_labels = array(
+        'name'               => 'Documents',
+        'singular_name'      => 'Document',
+        'menu_name'          => 'Documents',
+        'add_new'            => 'Add New Document',
+        'all_items'          => 'View All Documents',
+        'edit_item'          => 'Edit Document',
+        'view_item'          => 'View Document',
+        'view_items'         => 'View Document Archive',
+        'add_new_item'       => 'Add New Document',
+        'search_items'       => 'Search Documents',
+        'not_found'          => 'No documents found',
+        'not_found_in_trash' => 'No documents found in Trash'
+    );
+    $doc_args = array(
+        'labels'             => $doc_labels,
+        'public'             => true,
+        'capability_type'    => 'post',
+        'has_archive'        => 'documents',
+        'supports'           => array( 'title', 'revisions' ),
+        'menu_icon'          => 'dashicons-media-document'
+    );
+    register_post_type('documents', $doc_args);
+
+}
+
+add_filter('manage_edit-documents_columns', 'doc_columns');
+function doc_columns($columns) {
+    $columns['fileurl'] = 'File URL';
+    return $columns;
+}
+add_action('manage_posts_custom_column',  'show_doc_columns');
+function show_doc_columns($name) {
+    global $post;
+    switch ($name) :
+        case 'fileurl':
+            $views = get_field('file_url',$post->ID);
+            echo $views;
+    endswitch;
+}
 
 // add_action('init', 'register_custom_posts_courses');
 //
@@ -493,7 +486,7 @@ function mytheme_admin_bar_render() {
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/library/img/wlc_logo_blue.png);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/library/img/logo.png);
             padding-bottom: 30px;
             width: 100%;
             background-size:contain;
@@ -502,7 +495,10 @@ function my_login_logo() { ?>
           box-shadow:none;
         }
         .login{
-          background:#fff;
+          background:#9B6FC6;
+        }
+        .login #backtoblog a, .login #nav a{
+          color:#fff!important;
         }
     </style>
 <?php }
