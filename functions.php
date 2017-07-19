@@ -53,7 +53,7 @@ function bones_ahoy() {
   // cleaning up random code around images
   add_filter( 'the_content', 'bones_filter_ptags_on_images' );
   // cleaning up excerpt
-  add_filter( 'excerpt_more', 'bones_excerpt_more' );
+  // add_filter( 'excerpt_more', 'bones_excerpt_more' );
 
   // add_filter('acf/format_value/type=wysiwyg','eae_encode_emails');
 
@@ -283,7 +283,14 @@ acf_add_options_page(array(
  'position'     => '30',
  'capability'	=> 'edit_posts',
 ));
-
+acf_add_options_page(array(
+ 'page_title' 	=> 'Team',
+ 'menu_title'	=> 'Team',
+ 'menu_slug' 	=> 'team-settings',
+ 'icon_url'     => 'dashicons-groups',
+ 'position'     => '28',
+ 'capability'	=> 'edit_posts',
+));
 
 
 // acf_add_options_page(array(

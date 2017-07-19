@@ -58,6 +58,6 @@
 		</div>
 	</div>
 	<div class="container">
-		<p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> &bull; 501 (c)(3) &bull; All Rights Reserved</p>
+		<p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> &bull; 501 (c)(3) &bull; All Rights Reserved &bull; <a href="/privacy-policy">Privacy Policy</a></p>
 	</div>
 </footer>

@@ -104,6 +104,9 @@ function loadGravatars() {
 	}
 } // end function
 
+$('p:empty').each(function(){
+	$(this).remove();
+});
 
 
 equalheight = function(container){
@@ -165,9 +168,21 @@ jQuery(document).ready(function($) {
 			maxFontPixels: 18
 		});
 	});
-	$('.show_more button').click(function(){
-			$(this).next().slideDown();
-			$(this).hide();
+
+	$('.show_more>button').click(function(){
+			$(this).parent().find('.show_content').slideDown();
+			$(this).fadeOut();
+	});
+
+	// <div class="show-more-container">
+	// 		<div class="show-more-content +showContent">
+	// 			<form></form>
+	// 		</div>
+	// 		<button>Sign Up</button>
+	// </div>
+	$(".show-more-container button").on("click", function() {
+    $(this).parent().find(".show-more-content").slideDown();
+		$(this).fadeOut();
 	});
 
   /*
@@ -242,6 +257,7 @@ $(document).ready(function() {
       speed:600,
 			slideMargin:0.1,
 			pager:false,
+			auot: true,
       responsive : [
           {
               breakpoint:991,

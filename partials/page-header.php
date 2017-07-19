@@ -66,7 +66,7 @@ switch ( $bgtype ):
   break;
   case 'false' :
   default :
-    $herotag = 'class="bg-blue '.$valign.' '.$headerh.' '.$textcolor.'"';
+    $herotag = 'class="bg-w '.$valign.' '.$headerh.' '.$textcolor.'"';
   break;
 endswitch;
 

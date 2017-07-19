@@ -11,14 +11,14 @@
 
 
 nav.nav-mobile{
-  background:@adipsy_purple;
+  background:@adipsy_bluelight;
   padding-left: 15px;
   padding-right: 15px;
   @media(min-width:@navbreakpoint){
     display:none;
   }
   .nav-header{
-    background:@adipsy_purple;
+    background:@adipsy_bluelight;
     // padding:10px 0px 10px 15px;
     margin:0 -15px;
     .clearfix;
@@ -28,7 +28,7 @@ nav.nav-mobile{
       float:left;
     }
     div#bars{
-      color:#fff;
+      color:@adipsy_bluedarker;
       float:right;
       padding:14px 20px 13px 20px;
       font-size:20px;
@@ -38,27 +38,23 @@ nav.nav-mobile{
       }
     }
   }
-  ul.header-nav{
-    display:none;
-    padding:30px;
-    margin:0 -15px;
-    list-style:none;
-    li{
-      margin-bottom:3px;
-      a{
-        color:@white;
-        display:block;
-        padding:10px 15px;
-        &:hover{
-          color:@white;
-          background-color: @brand-primay-dark;
-        }
-      }
-      &:last-child{
+  .top-nav{
+    margin-top:15px;
+    border-top: 1px solid fade(@adipsy_greydark,20%);
+    padding:15px;
+    ul{
+      // padding:30px;
+      padding:0;
+      margin:0 -15px;
+      list-style:none;
+      li{
+        margin-bottom:3px;
         a{
-          background-color: @orange;
+          color:@adipsy_grey;
+          display:block;
+          padding:10px 15px;
           &:hover{
-            background-color: @orangedark;
+            color:@adipsy_grey;
           }
         }
       }
@@ -103,13 +99,16 @@ nav.nav-lg{
       }
       &.current-menu-item, &.current-page-ancestor{
         a{
-          color:#fff;
-          font-weight: bold;
+          font-weight: 600;
+          color: @adipsy_blue;
+          &:hover{
+            color:@adipsy_bluedarker;
+          }
         }
       }
       a{
         transition: color .3s ease;
-        color:rgba(255,255,255,1);
+        color:@adipsy_grey;
         display:inline-block;
         font-weight:normal;
         font-size:@default-nav-font-size;
@@ -124,7 +123,7 @@ nav.nav-lg{
 
         }
         &:hover{
-          color:#fff;
+          color:@adipsy_greydark;
         }
       }
     }
@@ -139,25 +138,28 @@ nav.nav-lg{
       a{
         color:rgba(255,255,255,1);
         &:hover{
-          color:@adipsy_yellow;
+          color:@adipsy_bluedarker;
         }
       }
     }
   }
   &.text-graydark{
     img{
-      .filter(invert());
+      // .filter(invert());
     }
     ul li{
       &.current-menu-item, &.current-page-ancestor{
         a{
-          color:@gray-dark;
+          color: @adipsy_blue;
+          &:hover{
+            color:@adipsy_bluedarker;
+          }
         }
       }
       a{
-        color:rgba(0,0,0,.8);
+        color:@adipsy_grey;
         &:hover{
-          color:@orange;
+          color:@adipsy_greydark;
         }
       }
     }
