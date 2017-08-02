@@ -67,8 +67,8 @@ img{
 
 
 main{
-  width:100%;
-  height:100%;
+  // width:100%;
+  // height:100%;
   // overflow-x: hidden;
   // overflow-y: scroll;
 }
@@ -76,12 +76,13 @@ main{
 
 a{
   cursor:pointer;
-  color:@adipsy_bluedark;
+  color:@adipsy_blue;
   text-decoration: none;
   transition:all .3s ease;
-  &:hover{
+  &:hover, &:focus{
     text-decoration: none;
-    color:@adipsy_bluedark;
+    color:@adipsy_blue;
+    outline:none;
   }
 }
 

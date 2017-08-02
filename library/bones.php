@@ -150,6 +150,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'bones-ie-only' );
 
+
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 		/*
@@ -160,7 +161,7 @@ function bones_scripts_and_styles() {
 
 
    wp_deregister_script('jquery');
-   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js", false, NULL, true);
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-1.11.1.min.js", false, NULL, false);
    wp_enqueue_script('jquery');
 
 		wp_enqueue_script( 'bones-js' );
@@ -169,10 +170,10 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'lightslider-js' );
 
 
-		$host = $_SERVER['SERVER_NAME'];
-		if($host == 'vccw.dev') {
-		    wp_enqueue_script( 'livereload-js' );
-		}
+		// $host = $_SERVER['SERVER_NAME'];
+		// if($host == 'adipsy.demo.johntylerhall.com' || $host == 'vccw.dev') {
+		//     wp_enqueue_script( 'livereload-js' );
+		// }
 
 
 	}

@@ -174,6 +174,7 @@ ul.howwehelp-nav{
   padding:15px 0;
   margin:0 auto;
   a.get-involved-block{
+    overflow: hidden;
     margin:7px 0;
     color:@white;
     position:relative;
@@ -261,7 +262,13 @@ ul.howwehelp-nav{
 div.sponsors{
   padding:60px 0;
   h2{
-    padding-bottom:30px;
+    // padding-bottom:30px;
+  }
+  p{
+    margin-bottom: 45px;
+  }
+  .btn{
+    margin-top:45px;
   }
 }
 
@@ -353,4 +360,112 @@ section.flex-basic.section-meet-the-team{
 
 .no-pad{
   padding-top:0!important;
+}
+
+.board-member{
+  padding: 30px 0;
+  &:not(:last-child){
+    border-bottom:1px @adipsy_greylight solid;
+  }
+  h2{
+
+  }
+}
+.team-members{
+  padding:15px 0 60px 0;
+  .team-member{
+    padding:30px 15px;
+    width:33%;
+    float:left;
+    text-align:center;
+    img{
+      max-height:150px;
+      margin-bottom:15px;
+    }
+    .name{
+      font-weight:400;
+      margin-bottom:0px;
+    }
+    .title{
+      font-size:16px;
+    }
+  }
+}
+
+body.archive.category{
+  &.category-yearly-summaries{header{background-color:@adipsy_blue;}}
+  &.category-support-groups{header{background-color:@adipsy_green;}}
+  &.category-homes-of-hope{header{background-color:@adipsy_red;}}
+  &.category-strength-keepers{header{background-color:@adipsy_purple;}}
+  &.category-community-events{header{background-color:@adipsy_yellow;h1{color:@adipsy_greydark;}}}
+  .navs{
+    background:@white;
+  }
+  header{
+    h1{
+      color:@white;
+    }
+    padding-top: 35px;
+    padding-bottom: 30px;
+    @media(min-width:600px){
+      padding-top: 130px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.blogpage{
+  padding:30px 0;
+  .container{
+    max-width:768px;
+  }
+  article{
+    padding:30px 0;
+    margin-bottom:15px;
+    // background:@adipsy_blue;
+    // a{color:@white}
+    h1{margin-top:0;}
+    .footer-category{margin-bottom:0;a{display:inline-block;color:@white;padding:5px 7px;background:@adipsy_blue;border-radius:3px;}}
+    &.category-support-groups{h1{a{color:@adipsy_green;}}}
+    &.category-homes-of-hope{h1{a{color:@adipsy_red;}}}
+    &.category-strength-keepers{h1{a{color:@adipsy_purple;}}}
+    &.category-community-events{h1{a{color:@adipsy_yellowdark;}}}
+    &.category-support-groups{.footer-category{a{background:@adipsy_green;}}}
+    &.category-homes-of-hope{.footer-category{a{background:@adipsy_red;}}}
+    &.category-strength-keepers{.footer-category{a{background:@adipsy_purple;}}}
+    &.category-community-events{.footer-category{a{background:@adipsy_yellow;}}}
+  }
+}
+
+section.category-bar-section{
+  padding: 10px 0;
+}
+ul.category-bar{
+  margin:0;
+  padding:0;
+  list-style:none;
+  text-align:center;
+  li{
+    display:inline-block;
+    // margin:5px;
+    padding:0 12px 0 0;
+    border-radius:3px;
+    a{
+      display:inline-block;
+      padding:10px 0px 10px 12px;
+    }
+    &.cat-item-8{a{color:@adipsy_red;}}
+    &.cat-item-10{a{color:@adipsy_purple;}}
+    &.cat-item-9{a{color:@adipsy_green;}}
+    &.cat-item-11{a{color:@adipsy_yellowdark;}}
+    &.current-cat{
+      color:@white;
+      background:@adipsy_blue;
+      a{color:@white;}
+      &.cat-item-8{background:@adipsy_red;}
+      &.cat-item-10{background:@adipsy_purple;}
+      &.cat-item-9{background:@adipsy_green;}
+      &.cat-item-11{background:@adipsy_yellow;color:@adipsy_greydark;a{color:@adipsy_greydark;}}
+    }
+  }
 }

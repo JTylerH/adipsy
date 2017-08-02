@@ -4,18 +4,6 @@
     <h1><?php single_cat_title(''); ?></h1>
 	</div>
 </header>
-<section id="theposts" class="bg-ow category-bar-section">
-	<div class="container">
-		<ul class="category-bar">
-			<?php wp_list_categories( array(
-				'orderby' => 'name',
-				'title_li' => '',
-				'show_count' => 1,
-				'exclude' => array( 7 )
-			) ); ?>
-		</ul>
-	</div>
-</section>
 <section class="bg-w blogpage" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 	<div class="container">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

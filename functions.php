@@ -248,6 +248,7 @@ function font_icons() {
   wp_enqueue_style('fontAwesome','//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 }
 
+
 add_action('wp_enqueue_scripts', 'font_icons');
 
 /* Admin Styles */
@@ -284,8 +285,8 @@ acf_add_options_page(array(
  'capability'	=> 'edit_posts',
 ));
 acf_add_options_page(array(
- 'page_title' 	=> 'Team',
- 'menu_title'	=> 'Team',
+ 'page_title' 	=> 'Team & Board Members',
+ 'menu_title'	=> 'Team & Board',
  'menu_slug' 	=> 'team-settings',
  'icon_url'     => 'dashicons-groups',
  'position'     => '28',

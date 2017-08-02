@@ -1,5 +1,6 @@
 <footer id="footer" class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="container">
+		<div class="hrule"></div>
 		<div class="row">
 			<div class="col-sm-3 footer-logo">
 				<img class="logo" src="<?php the_field('logo','options') ?>">
