@@ -7,10 +7,10 @@
           <img src="<?php echo get_template_directory_uri(); ?>/library/img/icon_homesofhope.svg">
           <p>Homes of Hope</p>
         </li>
-        <li class="txt-p p" data-item="desc-2">
+        <!-- <li class="txt-p p" data-item="desc-2">
           <img src="<?php echo get_template_directory_uri(); ?>/library/img/icon_strengthkeepers.svg">
           <p>Strength Keepers</p>
-        </li>
+        </li> -->
         <li class="txt-g g" data-item="desc-3">
           <img src="<?php echo get_template_directory_uri(); ?>/library/img/icon_supportgroups.svg">
           <p>Support Groups</p>
@@ -57,7 +57,7 @@
           ?>
         </div>
       </div>
-      <div id="desc-2" style="display:none;">
+      <!-- <div id="desc-2" style="display:none;">
         <figure>
           <img src="<?php echo get_template_directory_uri(); ?>/library/img/icon_strengthkeepers.svg">
           <figcaption class="txt-p">Strength Keepers</figcaption>
@@ -87,7 +87,7 @@
           endif;
           ?>
         </div>
-      </div>
+      </div> -->
       <div id="desc-3" style="display:none;">
         <figure>
           <img src="<?php echo get_template_directory_uri(); ?>/library/img/icon_supportgroups.svg">

@@ -47,11 +47,10 @@ echo '<section '.$headerstr.' class="flex-basic '.$bgclass.' '.$textalign.' '.ge
         endswitch;
         $btnrep = $btnrep.'<a href="'.$btnlink.'" class="btn '.$btnstyle.'" target="'.$btnnewtab.'">'.$btntext.'</a>';
       endif;
-    endwhile;
-  endif;
-  ?>
-  <div class="button-repeater has-<?php echo $btncount ?>-buttons">
-    <?php echo $btnrep; ?>
-  </div>
+    endwhile; ?>
+    <div class="button-repeater has-<?php echo $btncount ?>-buttons">
+      <?php echo $btnrep; ?>
+    </div>
+  <?php endif; ?>
 </div>
 </section>

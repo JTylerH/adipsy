@@ -1,5 +1,18 @@
 //DONATE BAR ON HOMEPAGE
 //===========================
+section.flex-basic.style-donate-bar{
+  .clearfix;
+  padding:30px 0!important;
+  .container{
+    max-width:none;
+  }
+  p{
+    text-align:center;
+    .fontsize-md();
+    margin:0;
+  }
+}
+
 div.donate-bar{
   .clearfix;
   padding:30px 0;
@@ -50,7 +63,7 @@ ul.howwehelp-nav{
   li{
     cursor:pointer;
     display:inline-block;
-    width:50%;
+    width:33%;
     float:left;
     text-align:center;
     padding:15px;
@@ -79,7 +92,7 @@ ul.howwehelp-nav{
     }
     @media(min-width:700px){
       padding:0 0 15px 0;
-      width:25%;
+      // width:33%;
       &.active{
         &.r, &.p, &.g, &.y{background:none;}
         &.r{border-bottom-color:@adipsy_red}
