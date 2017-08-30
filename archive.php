@@ -10,8 +10,9 @@
 			<?php wp_list_categories( array(
 				'orderby' => 'name',
 				'title_li' => '',
-				'show_count' => 1,
-				'exclude' => array( 7 )
+				'show_count' => 0,
+				'exclude' => array( 7 ),
+				'show_option_all' => '<i class="fa fa-reply"></i> Show All'
 			) ); ?>
 		</ul>
 	</div>
@@ -30,7 +31,7 @@
 				); ?>
 				</p>
 				<?php the_excerpt(); ?>
-				<?php printf( '<div class="footer-category">' . get_the_category_list(', ') . '</div>' ); ?>
+				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="btn">Read More</a>
 				<?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 			</article>
 		<?php endwhile; ?>

@@ -86,7 +86,7 @@ z-index: 1;
   }
     padding-top:60px; padding-bottom:60px;
     @media(min-width:@navbreakpoint){
-      padding: 13vw 0 10vw 0;
+      padding: 14vw 0 15vw 0;
       &.wh{ height: ~'calc(100% - 51px)'; }
     }
     h1{
@@ -133,11 +133,12 @@ body:not(.home) header{
     &.wh{
       padding-bottom:0;
       height: ~'calc(100vh - 78px);';
+      min-height:422px;
       &.valign-center{
         padding-top:100px;
       }
     }
-    &.ch{ padding-top:140px; padding-bottom:30px;}
+    // &.ch{ padding-top:140px; padding-bottom:30px;}
   }
   h1, h2, h3, p, .btn{
     .default-container();
@@ -189,5 +190,168 @@ body:not(.home) header{
 #pagename-about header{
   p{
     max-width:550px;
+  }
+}
+body:not(.home){
+  .navs{
+    // position:relative;
+  }
+}
+body.page-template-pt-gradient-nav{
+  @media(min-width:@navbreakpoint){
+    .navs{
+      background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,.7) 40%,rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,.7) 40%,rgba(255,255,255,0) 100%);
+      background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,.7) 40%,rgba(255,255,255,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9ffffff', endColorstr='#00ffffff',GradientType=0 );
+      height:100px;
+    }
+  }
+}
+body.page-template-pt-static-nav{
+  .navs{
+    position:relative;
+  }
+
+  header{
+    &.text-graydark{
+      h1{ color:@adipsy_greyer; }
+    }
+    h1{
+      color:@white;
+    }
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media(min-width:600px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+body#pagename-about-us{
+  header{
+    background-position:top;
+  }
+}
+body#pagename-about-us, body#pagename-volunteer{
+  .navs{
+    // position:relative;
+  }
+  header{
+    padding:0!important;
+    @media(min-width:@navbreakpoint){
+      padding:0 30px!important;
+    }
+    .container{
+      padding: 30px;
+      max-width: 786px;
+      background: rgba(255, 255, 255, 0.8);
+      @media(min-width:@navbreakpoint){
+        background: rgba(255, 255, 255, 0.95);
+      }
+      h1, p{
+        color:@adipsy_greyer;
+      }
+    }
+  }
+}
+
+body.blog {
+  .navs{
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.85) 0%,rgba(255,255,255,0.85) 30%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.85) 0%,rgba(255,255,255,0.85) 30%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9ffffff', endColorstr='#00ffffff',GradientType=0 );
+  }
+  header{
+    background-position:left;
+    background-size:130%;
+    padding:0!important;
+    .container{
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      max-width: 786px;
+      h1{
+        color:@adipsy_greyer;
+      }
+    }
+    @media(min-width:@navbreakpoint){
+      padding:0 30px!important;
+      // .container{border: 5px solid @adipsy_blue;}
+    }
+  }
+}
+
+body#pagename-donate{
+  @media(max-width:767px){
+    .navs{
+      position:relative;
+    }
+  }
+  header{
+    background-position: 80%;
+    background-size: cover;
+    padding:0!important;
+    @media(min-width:768px){
+      padding:0 30px!important;
+    }
+    @media(max-width:767px){
+      height:auto;
+      display: block;
+      .container{
+        padding:0;
+      }
+    }
+    @media(min-width:@navbreakpoint){
+      background-position: 26%;
+      background-size: 120%;
+    }
+    @media(min-width:768px){
+      background-position:center;
+      background-size: cover;
+    }
+    .donate-box-container{
+
+      padding: 30px;
+      // max-width: 300px;
+      background: rgba(255, 255, 255, 0.9);
+      h1{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: 35px;
+        margin-bottom: 30px;
+        // max-width: 236px;
+      }
+      @media(min-width:@navbreakpoint){
+        // background: rgba(255, 255, 255, 0.95);
+        // margin:0;
+        background: none;
+        max-width: 300px;
+        h1{
+          text-align: left;
+        }
+      }
+      @media(min-width:768px){
+        padding:0;
+        background:none;
+        max-width: 320px;
+        h1{
+          // max-width:none;
+          font-size: 42px;
+        }
+      }
+      h1, p{
+        color:@adipsy_greyer;
+      }
+    }
+  }
+}
+body#pagename-thank-you{
+  header{
+    display:block;
+    h1, p{
+      color:@adipsy_greyer;
+    }
   }
 }

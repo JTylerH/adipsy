@@ -1,5 +1,7 @@
 <?php get_header(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
 		<header class="article-header entry-header bg-w valign-center ch txt-k" role="banner" itemscope="" itemtype="http://schema.org/WPHeader">
 			<div class="container">
 		    <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
@@ -36,7 +38,7 @@
 
 		<section class="bg-w article-footer">
 			<div class="container">
-				<?php printf( '<div class="footer-category">' . get_the_category_list(', ') . '</div>' ); ?>
+				<?php printf( '<div class="footer-category">Back to: ' . get_the_category_list(', ') . '</div>' ); ?>
 				<?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 			</div>
 		</section> <?php // end article footer ?>
@@ -44,5 +46,5 @@
 		<?php //comments_template(); ?>
 
 	</article> <?php // end article ?>
-
+<?php endwhile; endif; ?>
 <?php get_footer(); ?>

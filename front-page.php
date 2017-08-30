@@ -7,7 +7,7 @@
 		<div class="container">
 			<div class="donate-bar">
 				<p>100% of your donation goes to helping people suffering from cancer.</p>
-				<a href="#" class="btn btn-blue btn-lg">Donate Now</a>
+				<a href="<?php bloginfo('url'); ?>/donate" class="btn btn-blue btn-lg">Donate Now</a>
 			</div>
 		</div>
 	</section>

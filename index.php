@@ -76,7 +76,7 @@ echo '<header '.$herotag.'role="banner" itemscope itemtype="http://schema.org/WP
 			<?php wp_list_categories( array(
 				'orderby' => 'name',
 				'title_li' => '',
-				'show_count' => 1,
+				'show_count' => 0,
 				'exclude' => array( 7 )
 			) ); ?>
 		</ul>

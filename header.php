@@ -37,7 +37,7 @@
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
-		<?php $pagename = "pagename-".strtolower( get_the_title() ); ?>
+		<?php $pagename = 'pagename-'.str_replace(' ', '-', strtolower(get_the_title())); ?>
 	</head>
 
 	<body id="<?php echo $pagename; ?>" <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">

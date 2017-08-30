@@ -186,6 +186,9 @@ ul.howwehelp-nav{
   .clearfix;
   padding:15px 0;
   margin:0 auto;
+  @media(min-width:700px){
+    margin:0 -15px;
+  }
   a.get-involved-block{
     overflow: hidden;
     margin:7px 0;
@@ -288,6 +291,7 @@ div.sponsors{
 //Contact Us
 section.custom-contact{
   padding:30px 0;
+  font-size:1.5em;
   a{
     color:@adipsy_purple;
 
@@ -325,7 +329,8 @@ section.custom-contact{
   }
 }
 .events-list #tribe-events-footer, .tribe-events-day #tribe-events-footer, .tribe-events-map #tribe-events-footer{
-  margin-top:0px;
+  margin:0px;
+  padding:0;
   border:none;
 }
 .custom-event-footer{
@@ -336,7 +341,7 @@ section.custom-contact{
 }
 .tribe-events-button{
   .btn!important;
-  .btn-yellow!important;
+  .btn-purple!important;
 }
 .single-tribe_events .tribe-events-event-meta{
   margin:0;
@@ -350,7 +355,17 @@ section.custom-contact{
 .show-more-content, .show_content{
   display:none;
 }
-
+@media(max-width: 768px){
+  #tribe-events-footer~a.tribe-events-ical.tribe-events-button{
+    height:auto;
+  }
+  .tribe-events-sub-nav {
+    margin-top:30px!important;
+    li a{
+      background:#f7f7f7;
+    }
+  }
+}
 
 //MEET THE TEAM
 section.flex-basic.section-meet-the-team{
@@ -388,9 +403,12 @@ section.flex-basic.section-meet-the-team{
   padding:15px 0 60px 0;
   .team-member{
     padding:30px 15px;
-    width:33%;
+    width:50%;
     float:left;
     text-align:center;
+    @media(min-width:660px){
+      width:33%;
+    }
     img{
       max-height:150px;
       margin-bottom:15px;
@@ -405,23 +423,70 @@ section.flex-basic.section-meet-the-team{
   }
 }
 
-body.archive.category{
-  &.category-yearly-summaries{header{background-color:@adipsy_blue;}}
-  &.category-support-groups{header{background-color:@adipsy_green;}}
-  &.category-homes-of-hope{header{background-color:@adipsy_red;}}
-  &.category-strength-keepers{header{background-color:@adipsy_purple;}}
-  &.category-community-events{header{background-color:@adipsy_yellow;h1{color:@adipsy_greydark;}}}
+body.single{
   .navs{
     background:@white;
+    position: static;
+  }
+  article{
+    &.category-uncategorized,
+    &.category-yearly-summaries{header{background-color:@adipsy_blue;}}
+    &.category-support-groups{header{background-color:@adipsy_green;}}
+    &.category-homes-of-hope{header{background-color:@adipsy_red;}}
+    &.category-strength-keepers{header{background-color:@adipsy_purple;}}
+    &.category-community-events{header{background-color:@adipsy_purple;}}
   }
   header{
     h1{
       color:@white;
     }
-    padding-top: 35px;
+    padding-top: 30px;
     padding-bottom: 30px;
     @media(min-width:600px){
-      padding-top: 130px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+body.events-archive, body.events-single{
+  .navs{
+    background:@white;
+    position: static;
+  }
+  header{
+    background-color:@adipsy_purple;
+    h1{
+      color:@white;
+    }
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media(min-width:600px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  .tribe-events-pg-template a{
+    color:@adipsy_purple;
+  }
+}
+body.archive.category{
+  &.category-yearly-summaries{header{background-color:@adipsy_blue;}}
+  &.category-support-groups{header{background-color:@adipsy_green;}}
+  &.category-homes-of-hope{header{background-color:@adipsy_red;}}
+  &.category-strength-keepers{header{background-color:@adipsy_purple;}}
+  &.category-community-events{header{background-color:@adipsy_purple;}}
+  .navs{
+    background:@white;
+    position: static;
+  }
+  header{
+    h1{
+      color:@white;
+    }
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media(min-width:600px){
+      padding-top: 50px;
       padding-bottom: 50px;
     }
   }
@@ -430,7 +495,7 @@ body.archive.category{
 .blogpage{
   padding:30px 0;
   .container{
-    max-width:768px;
+    // max-width:768px;
   }
   article{
     padding:30px 0;
@@ -439,14 +504,14 @@ body.archive.category{
     // a{color:@white}
     h1{margin-top:0;}
     .footer-category{margin-bottom:0;a{display:inline-block;color:@white;padding:5px 7px;background:@adipsy_blue;border-radius:3px;}}
-    &.category-support-groups{h1{a{color:@adipsy_green;}}}
-    &.category-homes-of-hope{h1{a{color:@adipsy_red;}}}
-    &.category-strength-keepers{h1{a{color:@adipsy_purple;}}}
-    &.category-community-events{h1{a{color:@adipsy_yellowdark;}}}
+    &.category-support-groups{h1{a{color:@adipsy_green;}}a.btn{.btn-green;}}
+    &.category-homes-of-hope{h1{a{color:@adipsy_red;}}a.btn{.btn-red;}}
+    &.category-strength-keepers{h1{a{color:@adipsy_purple;}}a.btn{.btn-purple;}}
+    &.category-community-events{h1{a{color:@adipsy_purple;}}a.btn{.btn-purple;}}
     &.category-support-groups{.footer-category{a{background:@adipsy_green;}}}
     &.category-homes-of-hope{.footer-category{a{background:@adipsy_red;}}}
     &.category-strength-keepers{.footer-category{a{background:@adipsy_purple;}}}
-    &.category-community-events{.footer-category{a{background:@adipsy_yellow;}}}
+    &.category-community-events{.footer-category{a{background:@adipsy_purple;}}}
   }
 }
 
@@ -470,7 +535,7 @@ ul.category-bar{
     &.cat-item-8{a{color:@adipsy_red;}}
     &.cat-item-10{a{color:@adipsy_purple;}}
     &.cat-item-9{a{color:@adipsy_green;}}
-    &.cat-item-11{a{color:@adipsy_yellowdark;}}
+    &.cat-item-11{a{color:@adipsy_purple;}}
     &.current-cat{
       color:@white;
       background:@adipsy_blue;
@@ -478,7 +543,354 @@ ul.category-bar{
       &.cat-item-8{background:@adipsy_red;}
       &.cat-item-10{background:@adipsy_purple;}
       &.cat-item-9{background:@adipsy_green;}
-      &.cat-item-11{background:@adipsy_yellow;color:@adipsy_greydark;a{color:@adipsy_greydark;}}
+      &.cat-item-11{background:@adipsy_purple;}
     }
+  }
+}
+
+
+.single{
+  section.entry-content{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media(min-width:600px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  .category-uncategorized{.footer-category{a{color:@adipsy_blue;}}}
+  .category-support-groups{.footer-category{a{color:@adipsy_green;}}}
+  .category-homes-of-hope{.footer-category{a{color:@adipsy_red;}}}
+  .category-strength-keepers{.footer-category{a{color:@adipsy_purple;}}}
+  .category-community-events{.footer-category{a{color:@adipsy_purple;}}}
+}
+
+.sponsor-grid{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @media(min-width:600px){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    li{
+      float:left;
+      width:50%;
+      text-align:center;
+      height:100px;
+      margin-top:25px;
+      margin-bottom:25px;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      @media(min-width:600px){
+        width:33%;
+      }
+      @media(min-width:960px){
+        width:25%;
+      }
+      a{
+        transition:transform .3s ease;
+        &:hover{
+          transform:scale(1.05);
+        }
+      }
+    }
+  }
+}
+section.section-accordion{
+  .accordionbg(@color){
+    .title{
+      background-color:@color;
+      // &:hover{background-color:darken(@color,5%)}
+    }
+  }
+
+  .accordion-dropdowns{
+    margin-top:40px;
+    margin-bottom:40px;
+    .accordion-dropdown{
+      .title{
+        padding:30px;
+        cursor:pointer;
+        transition:all .3s ease;
+        position:relative;
+        &:hover{
+          background-color:@adipsy_red!important;
+          color:#fff;
+          @media(min-width:768px){
+            &:after{
+              content:" ";
+              display: inline-block;
+              border-right: 2px solid #fff;
+              border-bottom: 2px solid #fff;
+              width: 10px;
+              height: 10px;
+              right:30px;
+              top:50%;
+              .transform(translate(0,-50%),rotate(225deg));
+            }
+          }
+        }
+        @media(min-width:768px){
+          &:after{
+              content:" ";
+              display: inline-block;
+              border-right: 2px solid @adipsy_greydark;
+              border-bottom: 2px solid @adipsy_greydark;
+              width: 10px;
+              height: 10px;
+              position:absolute;
+              right:30px;
+              top:50%;
+              .transform(translate(0,-50%),rotate(45deg));
+              .transition(transform .3s ease);
+          }
+        }
+      }
+      &.shown{
+        .title{
+          background-color:@adipsy_red!important;
+          color:#fff!important;
+          @media(min-width:768px){
+            &:after{
+              content:" ";
+              display: inline-block;
+              border-right: 2px solid #fff;
+              border-bottom: 2px solid #fff;
+              width: 10px;
+              height: 10px;
+              right:30px;
+              top:50%;
+              .transform(translate(0,-50%),rotate(225deg));
+            }
+          }
+        }
+      }
+      .content{
+        display:none;
+        background-color:@white;
+        border:1px solid @adipsy_offwhite;
+        padding:30px;
+        .clearfix;
+        p{
+          // max-width:100%;
+          // margin: 0 auto;
+        }
+        @media(max-width:767px){
+          p{
+            // text-align:left;
+          }
+        }
+      }
+    }
+    .accordion-dropdown{
+      &:nth-child(odd){.accordionbg(darken(@adipsy_offwhite,0%))}
+      &:nth-child(even){.accordionbg(darken(@adipsy_offwhite,1%))}
+      // &:nth-child(4n+1){.accordionbg(darken(@adipsy_offwhite,0%))}
+      // &:nth-child(4n+2){.accordionbg(darken(@adipsy_offwhite,1%))}
+      // &:nth-child(4n+3){.accordionbg(darken(@adipsy_offwhite,0%))}
+      // &:nth-child(4n+4){.accordionbg(darken(@adipsy_offwhite,1%))}
+      // &:nth-child(6n+5){.accordionbg(@blueshade3)}
+      // &:nth-child(6n+6){.accordionbg(@blueshade4)}
+    }
+  }
+}
+
+section.online-application{
+  padding-top:0px;
+  .container{
+    max-width: 1000px;
+    .gform_wrapper{
+      margin:0;
+
+      label, label.gfield_label{
+        font-weight:400;
+      }
+      .gfield_radio li{
+        margin: 0 0 6px;
+        label{
+          margin: 2px 0 0px 10px;
+          padding: 6px 0 0 0;
+        }
+      }
+      .gf_page_steps{
+         padding: 0 0 20px;
+         text-align:center;
+         margin-bottom:0px;
+      }
+      .gform_wrapper .gform_page_footer .button.gform_previous_button{
+        margin-bottom:16px;
+      }
+      .gform_body{
+        .gsection{
+          margin:0 0 30px 0;
+          padding:15px 0 15px 0;
+          border-bottom: 1px dotted #CCC;
+          .gsection_title{
+            text-align:center;
+            font-weight:400;
+          }
+        }
+        .ginput_container_fileupload{
+          input[type="file"]{
+            width: 100%;
+            text-align: center;
+            padding: 30px!important;
+            font-size:12px!important;
+            position:relative;
+            &:after{
+              font-family:FontAwesome, "Fira Sans", Helvetica, Arial, sans-serif;
+              content: "\f0ee  Drop Files Here";
+              color: #dcdcdc;
+              position: absolute;
+              right: 10px;
+              bottom: 7px;
+              text-align: center;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .gform_page_fields{
+        .gfield_date_day,.gfield_date_month{
+          max-width:6rem;
+          width:6rem;
+          margin-right:16px!important;
+          input{
+            width:100%;
+          }
+        }
+        .gfield_date_year{
+          max-width:10rem;
+          width:10rem;
+          input{
+            width:100%;
+          }
+        }
+        input, select, textarea{
+          background-color:@adipsy_offwhite;
+          border:1px solid darken(@adipsy_offwhite,5%);
+          border-radius:4px;
+          font-size:22px!important;
+          padding: 5px 10px!important;
+        }
+        select{
+          height: 56px;
+          @media(min-width:642px){
+            height: 43px;
+          }
+        }
+      }
+      .top_label div.ginput_container{
+        margin:0;
+      }
+    }
+  }
+}
+
+.ui-datepicker-mix(){
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 7px 0 rgba(0,0,0,.25);
+    -moz-box-shadow: 0 0 7px 0 rgba(0,0,0,.25);
+    box-shadow: 0 0 7px 0 rgba(0,0,0,.25);
+    border:1px solid #bbb;
+}
+.ui-datepicker{
+  .ui-datepicker-mix()!important;
+}
+.ui-datepicker-title{
+  select{
+    color:@adipsy_greydark;
+  }
+}
+.ui-datepicker-header{
+  background-color:@adipsy_blue!important;
+  border-width: 0!important;
+}
+.ui-datepicker thead, td.ui-datepicker-unselectable.ui-state-disabled{
+  background:#fff!important;
+}
+.ui-datepicker-calendar .ui-state-default{
+  background:@adipsy_greylight!important;
+}
+.ui-datepicker-calendar .ui-state-active, .ui-datepicker-calendar .ui-state-hover{
+  background:@adipsy_blue!important;
+  border:none!important;
+  color:#fff!important;
+  margin:0!important;
+  cursor:pointer!important;
+}
+.ui-datepicker td a, .ui-datepicker td span{
+  text-shadow:none!important;
+}
+
+
+
+
+
+
+#example-amounts{
+  span.bubble {
+    padding-top: 19px;
+    height: 80px;
+    width: 80px;
+    background: #4DBCEF;
+    border-radius: 50px;
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    margin-right: 13px;
+    font-weight: 500;
+    float: left;
+    clear: both;
+    margin-top: -3%;
+    text-align: center;
+    &.lb{
+      background: @adipsy_bluelight;
+    }
+    &.y{
+      background: @adipsy_yellow;
+    }
+  }
+  p{
+    font-size: 21px;
+    padding-top: 45px;
+    text-align: left;
+    clear: both;
+    display: inline-block;
+  }
+  h1{
+    margin-bottom:0;
+  }
+  .button-repeater{
+    clear: both;
+    padding-top: 20px;
   }
 }

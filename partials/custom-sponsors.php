@@ -9,7 +9,7 @@
           <li><a href="<?php the_sub_field('link'); ?>" target="_blank"><img src="<?php the_sub_field('image'); ?>"></a></li>
         <?php endwhile; ?>
       </ul>
-      <a href="#" class="btn btn-blue">See Who's Helping Us</a>
+      <a href="<?php bloginfo('url'); ?>/about-us/our-partners/" class="btn btn-blue">See Who's Helping Us</a>
     </div>
   </div>
 </section>

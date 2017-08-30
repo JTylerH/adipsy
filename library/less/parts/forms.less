@@ -222,7 +222,7 @@ a.lostpwd{
   margin-bottom:0;
 }
 .gform_wrapper .gform_page_footer .button.gform_previous_button{
-  margin-bottom:0!important;
+  // margin-bottom:0!important;
 }
 
 .gform_wrapper .gform_footer{
@@ -305,13 +305,16 @@ a.lostpwd{
 
 .gf-donate-form(){
   margin:0;
-  max-width:320px;
+  // max-width:320px;
   &.gf-donate-confirm{
     max-width:550px;
     margin:0 auto;
   }
   .gform_footer{
     padding-top:0;
+    input[type=submit]{
+      border:none;
+    }
   }
   select{
     color:@adipsy_greydark;
@@ -321,10 +324,10 @@ a.lostpwd{
     height: 55px;
     padding: 5px 15px;
   }
-  padding:15px;
+  // padding:15px;
   border-radius:4px;
-  border: 1px solid @adipsy_greylight;
-  background:fade(@white,90%);
+  // border: 1px solid @adipsy_greylight;
+  // background:fade(@white,90%);
   .ginput_container_radio, .gfield_radio{
     margin:0;
   }
@@ -360,9 +363,11 @@ a.lostpwd{
     &:not([class*="ginput_amount"]){
       font-size:32px;
       border-radius: 4px;
-      border: 1px solid #ebebeb;
       height: 55px;
       padding: 5px 15px;
+    }
+    &:not([type=submit]){
+      border: 1px solid #ebebeb;
     }
   }
   input.button, input[type=submit]{
@@ -384,7 +389,7 @@ a.lostpwd{
   .gfield{
     margin-top:0;
     &.gfield_price{
-      margin-bottom:16px;
+      margin-bottom:20px;
     }
   }
   .gfield_label{
@@ -428,7 +433,7 @@ a.lostpwd{
       line-height: 37px;
       cursor: pointer;
       color: @adipsy_blue;
-      text-shadow: 0 1px 0 #fff;
+      text-shadow: 0 0px 0 #fff;
       max-width:100%;
       width: 100%;
       }

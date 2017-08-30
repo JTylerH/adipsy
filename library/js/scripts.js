@@ -195,10 +195,10 @@ jQuery(document).ready(function($) {
 	    $(this).hide();
 	});
 
-	$('.leap-dept-dropdown>.title').click(function() {
+	$('.accordion-dropdown>.title').click(function() {
 			var $c = $(this).parent().find('.content');
 
-			$('.leap-dept-dropdown .content').each(function(){
+			$('.accordion-dropdown .content').each(function(){
 				$(this).slideUp().parent().removeClass('shown');
 			});
 
@@ -252,20 +252,20 @@ $(document).ready(function() {
   $('#sponsor-slider').lightSlider({
       item:4,
       loop:true,
-      slideMove:4,
+      slideMove:1,
       easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
       speed:600,
 			slideMargin:0.1,
 			pager:false,
-			auot: true,
+			auto: true,
+			pause: 4000,
       responsive : [
           {
               breakpoint:991,
               settings: {
                   item:3,
                   slideMove:3,
-									controls:false,
-									loop:true
+									controls:false
                 }
           },
           {
@@ -273,8 +273,7 @@ $(document).ready(function() {
               settings: {
                   item:2,
                   slideMove:2,
-									controls:false,
-									loop:true
+									controls:false
                 }
           }
       ]

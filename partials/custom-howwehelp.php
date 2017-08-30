@@ -15,7 +15,7 @@
           <img src="<?php echo get_template_directory_uri(); ?>/library/img/icon_supportgroups.svg">
           <p>Support Groups</p>
         </li>
-        <li class="txt-y y" data-item="desc-4">
+        <li class="txt-p p" data-item="desc-4">
           <img src="<?php echo get_template_directory_uri(); ?>/library/img/icon_communityevents.svg">
           <p>Community Events</p>
         </li>
@@ -122,7 +122,7 @@
       <div id="desc-4" style="display:none;">
         <figure>
           <img src="<?php echo get_template_directory_uri(); ?>/library/img/icon_communityevents.svg">
-          <figcaption class="txt-y">Community Events</figcaption>
+          <figcaption class="txt-p">Community Events</figcaption>
         </figure>
         <div class="content">
           <p><?php the_field('community_events_desc'); ?></p>

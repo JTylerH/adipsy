@@ -2,7 +2,7 @@
 $btncount = 0;
 $btnrep = "";
 ?>
-<section class="flex-basic bg-blueshade05 text-centerheader">
+<section class="section-accordion bg-w text-centerheader">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -11,9 +11,9 @@ $btnrep = "";
         <?php endif; ?>
         <?php if (get_sub_field('accordion_content')): the_sub_field('accordion_content'); endif; ?>
         <?php if( have_rows('accordion_tabs') ): ?>
-          <div class="leap-dept-dropdowns">
+          <div class="accordion-dropdowns">
           <?php while ( have_rows('accordion_tabs') ) : the_row(); ?>
-            <div class="leap-dept-dropdown">
+            <div class="accordion-dropdown">
               <div class="title"><?php the_sub_field('title'); ?></div>
               <div class="content"><p><?php the_sub_field('description'); ?></p></div>
             </div>

@@ -18,7 +18,7 @@
 				); ?>
 				</p>
 				<?php the_excerpt(); ?>
-				<?php printf( '<div class="footer-category">' . get_the_category_list(', ') . '</div>' ); ?>
+				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="btn btn-blue">Read More</a>
 				<?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 			</article>
 		<?php endwhile; ?>

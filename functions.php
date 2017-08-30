@@ -503,11 +503,11 @@ function my_login_logo() { ?>
           box-shadow:none;
         }
         .login{
-          background:#9B6FC6;
+          background:#efefef;
         }
-        .login #backtoblog a, .login #nav a{
-          color:#fff!important;
-        }
+        /*.login #backtoblog a, .login #nav a{
+          color:#4dbcef!important;
+        }*/
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
